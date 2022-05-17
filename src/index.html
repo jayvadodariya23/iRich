@@ -6,8 +6,124 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+
+  
+ 
 </head>
 <body>
   <app-root></app-root>
+
+ <!-- jquery & bootstrap js -->
+ <script src="assets/js/jquery.slim.min.js"></script>
+ <script src="assets/js/bootstrap.bundle.min.js"></script>
+ <script src="assets/js/popper.min.js"></script>
+ <script src="assets/js/owl.carousel.js"></script>
+
+
+ <!-- irch-banner carousel  -->
+ <script>
+     $(document).ready(function() {
+         $('.irch-ban-carousel').owlCarousel({
+             loop: true,
+             margin: 10,
+             dots: true,
+             items: 1,
+             autoPlay: true
+         })
+     })
+ </script>
+ <!-- irch-banner carousel  end-->
+
+ <!-- gallery carousel -->
+ <script>
+     $(document).ready(function() {
+         $('.gallery-carousel').owlCarousel({
+             loop: false,
+             margin: 20,
+             dots: false,
+             nav: true,
+             navText: [
+                 '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                 '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+             ],
+             items: 5,
+             responsive: {
+                 0: {
+                     items: 1
+                 },
+                 600: {
+                     items: 3
+                 },
+                 1000: {
+                     items: 5
+                 }
+             }
+
+         });
+
+         $('.irch-blog-carousel').owlCarousel({
+             loop: false,
+             margin: 20,
+             dots: true,
+             nav: false,
+             items: 3,
+             responsive: {
+                 0: {
+                     items: 1
+                 },
+                 600: {
+                     items: 3
+                 },
+                 1000: {
+                     items: 3
+                 }
+             }
+
+         });
+     });
+ </script>
+ <!-- gallery carousel end-->
+
+ <!-- video tagg -->
+ <script>
+     // Get the video
+     var video = document.getElementById("irch_video");
+
+     // Get the button
+     var btn = document.getElementById("myBtn");
+
+     // Pause and play the video, and change the button text
+     function myFunction() {
+         if (video.paused) {
+             video.play();
+             btn.innerHTML = "Pause";
+         } else {
+             video.pause();
+             btn.innerHTML = "Play";
+         }
+     }
+ </script>
+ <!-- video tagg end-->
+ 
+ <!-- blog carousel -->
+ <script>
+     $(document).ready(function() {
+
+
+
+     })
+ </script>
+ <!-- blog carousel end-->
+
+ <!-- toggler icon -->
+ <script>
+     $(document).ready(function() {
+         $('#nav-icon1,#nav-icon2,#nav-icon3,#nav-icon4').click(function() {
+             $(this).toggleClass('open');
+         });
+     });
+ </script>
+    
 </body>
 </html>

@@ -1,0 +1,92 @@
+<header>
+    <div class="container-fluid">
+        <nav class="navbar  navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo.png" alt="Logo">
+            </a>
+            <button class="menu d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+                aria-label="Main Menu">
+                <svg width="50" height="50"  viewBox="0 0 100 100">
+                    <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                    <path class="line line2" d="M 20,50 H 80" />
+                    <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                </svg>
+                </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="irch-nav navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="aboutClick()" style="cursor: pointer;">About iRich</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  (click)="dowloadClick()" style="cursor: pointer;">Downloads</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" style="cursor: pointer;" routerLink="/map">Interactive Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"  (click)="blogClick()" style="cursor: pointer;">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" (click)="contactClick()" style="cursor: pointer;" routerLink="/home">Contact Us</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto social-links">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6.132" height="13.2" viewBox="0 0 6.132 13.2">
+                                <path id="fb" d="M1.351,7.392v6.382a.166.166,0,0,0,.166.166h2.37a.166.166,0,0,0,.166-.166V7.288H5.771a.166.166,0,0,0,.166-.152L6.1,5.182A.166.166,0,0,0,5.937,5H4.054V3.615a.588.588,0,0,1,.588-.588H5.966a.166.166,0,0,0,.166-.166V.906A.166.166,0,0,0,5.966.74H3.728A2.378,2.378,0,0,0,1.351,3.117V5H.166A.166.166,0,0,0,0,5.168V7.122a.166.166,0,0,0,.166.166H1.351Z" transform="translate(0 -0.74)" fill="#fff" fill-rule="evenodd"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="13.769" height="13.769" viewBox="0 0 13.769 13.769">
+                                <path id="insta" d="M58.6,2.535a.809.809,0,1,0,.809.809.809.809,0,0,0-.809-.809M55,3.573a3.4,3.4,0,1,0,3.4,3.4,3.4,3.4,0,0,0-3.4-3.4m0,5.578a2.178,2.178,0,1,1,2.178-2.178A2.181,2.181,0,0,1,55,9.151m6.861-5A4.147,4.147,0,0,0,57.717,0H52.243A4.147,4.147,0,0,0,48.1,4.147V9.621a4.148,4.148,0,0,0,4.147,4.147h5.474a4.148,4.148,0,0,0,4.147-4.147Zm-1.3,5.474a2.848,2.848,0,0,1-2.848,2.848H52.243a2.849,2.849,0,0,1-2.848-2.848V4.147A2.849,2.849,0,0,1,52.243,1.3h5.474a2.848,2.848,0,0,1,2.848,2.848Z" transform="translate(-48.096)" fill="#fff"/>
+                                </svg>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="11.862" height="9.77" viewBox="0 0 11.862 9.77">
+                                <path id="twitter" d="M115.219,2.277a4.89,4.89,0,0,1-1.2.342c.193-.032.478-.382.591-.523a2.205,2.205,0,0,0,.4-.726c.01-.021.018-.047,0-.063a.068.068,0,0,0-.064.005,6.124,6.124,0,0,1-1.423.545.1.1,0,0,1-.1-.026A1.164,1.164,0,0,0,113.3,1.7a2.516,2.516,0,0,0-.689-.422,2.4,2.4,0,0,0-1.057-.17,2.527,2.527,0,0,0-1,.283,2.589,2.589,0,0,0-.809.661,2.484,2.484,0,0,0-.483.968,2.621,2.621,0,0,0-.026,1.022c.008.057,0,.065-.049.057a7.6,7.6,0,0,1-4.891-2.489c-.057-.065-.088-.065-.135,0a2.48,2.48,0,0,0,.423,2.93c.1.091.194.182.3.265a2.5,2.5,0,0,1-.944-.265c-.057-.036-.086-.015-.091.049a1.514,1.514,0,0,0,.016.28,2.508,2.508,0,0,0,1.546,2,1.454,1.454,0,0,0,.314.1,2.8,2.8,0,0,1-.926.029c-.068-.013-.093.021-.068.085a2.6,2.6,0,0,0,1.945,1.628c.088.016.176.016.265.036-.005.008-.011.008-.016.016a3.081,3.081,0,0,1-1.328.7,4.758,4.758,0,0,1-2.017.258c-.109-.016-.131-.015-.161,0s0,.044.031.072c.137.091.277.171.42.249a6.665,6.665,0,0,0,1.348.539,7.181,7.181,0,0,0,6.972-1.63,7.316,7.316,0,0,0,1.929-5.337c0-.077.091-.119.145-.159a4.692,4.692,0,0,0,.945-.987.287.287,0,0,0,.059-.189v-.01c0-.031,0-.022-.045,0" transform="translate(-103.402 -1.106)" fill="#fff"/>
+                                </svg>
+
+
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12.151" height="11.769" viewBox="0 0 12.151 11.769">
+                                <g id="linkedin" transform="translate(0 0)">
+                                    <path id="Path_59080" data-name="Path 59080" d="M179.539,16v4.356a.2.2,0,0,1-.195.195h-2.249a.2.2,0,0,1-.195-.195V16.305c0-1.066-.381-1.794-1.336-1.794a1.443,1.443,0,0,0-1.353.965,1.81,1.81,0,0,0-.087.643v4.237a.2.2,0,0,1-.195.195H171.68a.194.194,0,0,1-.195-.195c.005-1.079.028-6.313,0-7.543a.194.194,0,0,1,.195-.2h2.244a.2.2,0,0,1,.195.195v.929c-.005.009-.013.018-.018.026h.018V13.74a2.62,2.62,0,0,1,2.378-1.311c1.736,0,3.037,1.134,3.037,3.571m-11.956,4.551h2.248a.2.2,0,0,0,.195-.195V12.81a.2.2,0,0,0-.195-.195h-2.248a.2.2,0,0,0-.195.195v7.546a.2.2,0,0,0,.195.195" transform="translate(-167.388 -8.782)" fill="#fff"/>
+                                    <path id="Path_59081" data-name="Path 59081" d="M169.79,4.9a1.412,1.412,0,1,1-1.412-1.412A1.412,1.412,0,0,1,169.79,4.9" transform="translate(-166.965 -3.485)" fill="#fff"/>
+                                </g>
+                                </svg>
+
+                        </a>
+                    </li>
+                </ul>
+                <div class="inquiry ml-auto d-flex align-items-center">
+                    <div class="iqimg mr-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="36.639" height="36.083" viewBox="0 0 36.639 36.083">
+                            <g id="phone" transform="translate(0.889 0.75)">
+                                <path id="Path_2617" data-name="Path 2617" d="M-225.481,129.82a4.632,4.632,0,0,0-2.005-3.178c-.6-.4-1.209-.854-1.794-1.29-2.349-1.749-5.012-3.731-7.132-1.607a2.521,2.521,0,0,1-2.683.888c-.383-.321-1.961-1.661-3.593-3.28-2.076-2.059-2.279-2.98-1.092-4.926,1.922-3.15,1.106-4.317-1.6-8.184l-.119-.171c-1.408-2.014-2.547-2.939-3.812-3.092-1.489-.181-2.843.8-3.971,1.793-2.773,2.43-3.384,6.391-1.593,10.336a36.579,36.579,0,0,0,12.423,14.777c3.738,2.514,6.84,4.109,9.676,4.108a7.8,7.8,0,0,0,5.387-2.289A4.781,4.781,0,0,0-225.481,129.82Z" transform="translate(255.887 -101.412)" fill="none" stroke="#f4530e" stroke-miterlimit="10" stroke-width="1.5"/>
+                                <path id="Path_2618" data-name="Path 2618" d="M-174.056,110.7a17.911,17.911,0,0,0-17.891-17.891" transform="translate(209.056 -92.811)" fill="none" stroke="#f4530e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                                <path id="Path_2619" data-name="Path 2619" d="M-179.959,125.021a12,12,0,0,0-11.988-11.988" transform="translate(209.43 -107.506)" fill="none" stroke="#f4530e" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+                            </g>
+                        </svg>
+
+                    </div>
+                    <div class="iqnum">
+                        <h6>Have a query?</h6>
+                        <h3>+1 545 633 6543</h3>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>

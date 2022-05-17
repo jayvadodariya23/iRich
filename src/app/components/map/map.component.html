@@ -1,0 +1,34 @@
+<div class="mapouter">
+    <div class="gmap_canvas">
+        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1247&amp;height=988&amp;hl=en&amp;q=Parihar Nagar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    </div>
+    <div class="irch-map-locations">
+        <div class="irch-map-title d-flex justify-content-between">
+            <h6 class="heri-sub-title">All Places</h6>
+            <a class="btn btn-location d-lg-none d-md-none" data-toggle="collapse" href="#mapLocation" role="button" aria-expanded="false" aria-controls="mapLocation">
+                <span class="accicon"><i class="fas fa-arrow-up rotate-icon"></i></span>
+            </a>
+        </div>
+
+        <ul class="irch-map-location collapse d-lg-block d-md-block" id="mapLocation"  *ngFor="let place of places">
+            <li>
+                <a href="#">
+                    <div class="d-flex pt-4">
+                        <figure>
+                            <img src="assets/images/map-loc.png" alt="Map Location">
+                        </figure>
+                        <div class="irch-map-title ml-3">
+                            <h4>Test Place {{place.id}}</h4>
+                                <h6>1, 42nd Street, Simpson Bay St Maarten - 23134</h6>
+                        </div>
+                        <div class="ml-auto p-2">
+                            <svg id="Forward_arrow" data-name="Forward arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
+                                <path id="Path_10" data-name="Path 10" d="M9,0,7.364,1.636l6.195,6.195H-10v2.338H13.558L7.364,16.364,9,18l9-9Z" transform="translate(10)" fill="#202b5d"></path>
+                              </svg>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
