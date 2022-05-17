@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Blog } from 'src/app/modals/blog';
-import { getBlogsResponse } from 'src/app/modals/blogs';
-import { BlogService } from 'src/app/services/blog.service';
+import { ContactusService } from 'src/app/services/contactus.service';
 
 @Component({
   selector: 'app-contactus',
@@ -10,18 +8,39 @@ import { BlogService } from 'src/app/services/blog.service';
 })
 export class ContactusComponent implements OnInit {
 
-  Blogs :Blog[] = new getBlogsResponse().data; 
+  constructor(private contactUsService : ContactusService) { 
 
-  constructor(private blogService : BlogService) { 
-
-    blogService.getAllBlogs().then(res => {
-      this.Blogs = res.data;
-    }).catch(err => {
-      this.Blogs = new getBlogsResponse().data;
-    });
   }
 
   ngOnInit(): void {
+   
+
+    
+
+
+  }
+
+  sendMessage = () => {
+    let res = "";
+    
+    let data = {
+      full_name : "name",
+      email : "tset@gmail.com",
+      number : "9427962909",
+      message : "hy"
+    }
+
+    this.contactUsService.saveContactInquiry(data).then(res => {
+      debugger;
+      res = res;
+      console.log(res);
+      //this.Blogs = res.data;
+    }).catch(err => {
+      res = err;
+      //this.Blogs = new getBlogsResponse().data;
+    });
+
+    
   }
 
 }

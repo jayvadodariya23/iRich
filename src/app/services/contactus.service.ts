@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Response } from '../modals/response';
 import { HttpService } from './http.service';
-import { getBlogsResponse } from '../modals/blogs';
-
 
 let formdata : FormData = new FormData();
 formdata.append("token","123456789");
@@ -10,14 +8,18 @@ formdata.append("token","123456789");
 @Injectable({
   providedIn: 'root'
 })
-export class BlogService {
+export class ContactusService {
 
   constructor(private httpService : HttpService) { }
 
-  getAllBlogs(){
+   saveContactInquiry = (dataObj : any) => {
 
-   let res = new Promise<getBlogsResponse>( (resolve, reject)=> {
-      this.httpService.post<getBlogsResponse>("/get_blogs",formdata).subscribe((response)=>{
+    for(let key in dataObj){
+      formdata.append(key,dataObj[key]);
+    }
+
+    let res = new Promise<Response>( (resolve, reject)=> {
+      this.httpService.post<Response>("/contact_us",formdata).subscribe((response)=>{
         resolve(response);
       },(error)=> {
         reject(error);
@@ -25,9 +27,7 @@ export class BlogService {
 
     });
     return res;
-    
+
   }
-
-
 
 }
