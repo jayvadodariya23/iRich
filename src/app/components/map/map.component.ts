@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Place } from 'src/app/modals/place';
+import { getPlacesResponse } from 'src/app/modals/places';
+import { PlacesService } from 'src/app/services/places.service';
 
-export interface PlacesDetails  {
-  id : number
-}
 
 @Component({
   selector: 'app-map',
@@ -11,10 +11,21 @@ export interface PlacesDetails  {
 })
 export class MapComponent implements OnInit {
 
-  constructor() { }
+  constructor(private placeServices : PlacesService) { }
+
+  places :Place[] = new getPlacesResponse().data;
 
   ngOnInit(): void {
+
+    this.placeServices.getPlaces().then(res => {
+      this.places = res.data;
+      console.log(res);
+    }).catch(err => {
+      this.places = new getPlacesResponse().data;
+    });
+
   }
 
-  places :PlacesDetails[] = [{ id : 1},{ id : 2},{ id : 3},{ id : 4},{ id : 5}]
+ 
+
 }

@@ -16,6 +16,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { BlogComponent } from './components/home/blog/blog.component';
 import { MapComponent } from './components/map/map.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
+import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +33,10 @@ import { HttpClientModule } from '@angular/common/http';
     ContactusComponent,
     FooterComponent,
     BlogComponent,
-    MapComponent
+    MapComponent,
+    PrivacyPolicyComponent,
+    TermsAndConditionComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,

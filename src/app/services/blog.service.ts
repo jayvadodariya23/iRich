@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpService } from './http.service';
 import { getBlogsResponse } from '../modals/blogs';
+import { getBlogDetail } from '../modals/resBlogDetail';
 
 
 let formdata : FormData = new FormData();
@@ -28,6 +29,23 @@ export class BlogService {
     
   }
 
+  getBlogDetail(){
+      let data : any = {
+        blog_id : "1"
+      }
+      for(let key in data){
+        formdata.append(key,data[key]);
+      }
+      let res = new Promise<getBlogDetail>( (resolve, reject)=> {
+        this.httpService.post<getBlogDetail>("/get_blog_details",formdata).subscribe((response)=>{
+          resolve(response);
+        },(error)=> {
+          reject(error);
+        });
 
+      });
+      return res;
+    }
 
-}
+  }
+

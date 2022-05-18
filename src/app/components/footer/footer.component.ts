@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FooterService } from 'src/app/services/footer.service';
+
+let formdata : FormData = new FormData();
+formdata.append("token","123456789");
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +11,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private footerService : FooterService) { }
 
   ngOnInit(): void {
   }
 
+  subscribeEmailClick = () => {
+    debugger;
+    let res = "";
+    let data = {
+      email : "testEmail@gmail.com"
+    }
+   
+    this.footerService.subscribe_email(data).then(res => {
+      res = res;
+    }).catch(err => {
+      res = err;
+    });
+
+  }
 }

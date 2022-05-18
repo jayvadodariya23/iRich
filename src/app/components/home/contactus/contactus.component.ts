@@ -31,13 +31,9 @@ export class ContactusComponent implements OnInit {
     }
 
     this.contactUsService.saveContactInquiry(data).then(res => {
-      debugger;
       res = res;
-      console.log(res);
-      //this.Blogs = res.data;
     }).catch(err => {
       res = err;
-      //this.Blogs = new getBlogsResponse().data;
     });
 
     

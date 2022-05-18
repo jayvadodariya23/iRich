@@ -15,11 +15,11 @@
                 <a href="#">
                     <div class="d-flex pt-4">
                         <figure>
-                            <img src="assets/images/map-loc.png" alt="Map Location">
+                            <img src="{{place.icon}}" alt="Map Location">
                         </figure>
                         <div class="irch-map-title ml-3">
-                            <h4>Test Place {{place.id}}</h4>
-                                <h6>1, 42nd Street, Simpson Bay St Maarten - 23134</h6>
+                            <h4>Test Place {{place.place_title}}</h4>
+                                <h6>{{place.place_description}}</h6>
                         </div>
                         <div class="ml-auto p-2">
                             <svg id="Forward_arrow" data-name="Forward arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
