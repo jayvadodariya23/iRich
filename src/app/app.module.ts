@@ -19,6 +19,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { PlaceDetailComponent } from './components/place-detail/place-detail.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,12 +41,16 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
     MapComponent,
     PrivacyPolicyComponent,
     TermsAndConditionComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    PlaceDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

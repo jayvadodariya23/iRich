@@ -1,7 +1,7 @@
 export class Response{
     constructor(){
         this.status = false;
-        this.message = "";
+        this.message = " ";
         this.data = new Array();
     }
    status : boolean;

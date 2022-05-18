@@ -1,24 +1,26 @@
 <div class="mapouter">
     <div class="gmap_canvas">
-        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1247&amp;height=988&amp;hl=en&amp;q=Parihar Nagar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+        src="https://maps.google.com/maps?width=1247&amp;height=988&amp;hl=en&amp;q=Parihar Nagar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
     </div>
     <div class="irch-map-locations">
         <div class="irch-map-title d-flex justify-content-between">
             <h6 class="heri-sub-title">All Places</h6>
-            <a class="btn btn-location d-lg-none d-md-none" data-toggle="collapse" href="#mapLocation" role="button" aria-expanded="false" aria-controls="mapLocation">
+            <a class="btn btn-location d-lg-none d-md-none" data-toggle="collapse" href="#mapLocation" role="button" 
+                aria-expanded="false" aria-controls="mapLocation">
                 <span class="accicon"><i class="fas fa-arrow-up rotate-icon"></i></span>
             </a>
         </div>
 
         <ul class="irch-map-location collapse d-lg-block d-md-block" id="mapLocation"  *ngFor="let place of places">
             <li>
-                <a href="#">
+                <a [routerLink]="['/place-detail', place.place_id]">
                     <div class="d-flex pt-4">
                         <figure>
                             <img src="{{place.icon}}" alt="Map Location">
                         </figure>
                         <div class="irch-map-title ml-3">
-                            <h4>Test Place {{place.place_title}}</h4>
+                            <h4>{{place.place_title}}</h4>
                                 <h6>{{place.place_description}}</h6>
                         </div>
                         <div class="ml-auto p-2">

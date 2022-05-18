@@ -28,10 +28,9 @@ export class PlacesService {
   }
 
 
-  getPlaceDetail = () => {
-
+  getPlaceDetail = (place_id : string) => {
     let data : any = {
-      place_id : "4"
+      place_id : place_id
     }
 
     for(let key in data){

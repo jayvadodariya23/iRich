@@ -7,16 +7,18 @@
                     <div class="irch-left col-lg-6 col-sm-6">
                         <form action="/" class="irch-contact-frm">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Full Name">
+                                <input type="text" name="name" [(ngModel)]="data.full_name" class="form-control" placeholder="Your Full Name">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Your Email Address">
+                                <input type="email" name="email" [(ngModel)]="data.email" class="form-control" placeholder="Your Email Address">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Your Number">
+                                <input type="text" name="number" [(ngModel)]="data.number" class="form-control" (keypress)="IsDigit($event)" 
+                                placeholder="Your Number">
                             </div>
                             <div class="form-group">
-                                <textarea placeholder="What would you like to know about?" name="" class="form-control" id="" cols="30" rows="6"></textarea>
+                                <textarea placeholder="What would you like to know about?" [(ngModel)]="data.message" name="likeabout" class="form-control" 
+                                    id="" cols="30" rows="6"></textarea>
                             </div>
                             <div class="from-group">
                                 <a class="btn irch-frm-btn" (click)="sendMessage()">  Send your message</a>

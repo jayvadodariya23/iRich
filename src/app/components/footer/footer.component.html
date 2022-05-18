@@ -59,7 +59,7 @@
                         <p>Stay updated with latest news and happenings on UNESCO World and iRich. We will not spam your mailbox. We will only send relevant information that you might like.</p>
                         <form action="/" class="news-frm">
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter your email id to subscribe" >
+                                <input type="text" [(ngModel)]="email" name="email" class="form-control" placeholder="Enter your email id to subscribe" >
                                 <button class="btn news-btn" (click)="subscribeEmailClick()">Sign Up</button>
                             </div>
                         </form>
@@ -114,10 +114,10 @@
                     </div>
                     <div class="col-md-6 col-lg-4 col-sm-12 col-xl-4 text-right">
                         <div class="foot-privacy">
-                            <a href="#">
+                            <a [routerLink]="['/privacyPolicy']">
                                 Privacy Policy    <span>/</span>
                             </a>
-                            <a href="#">
+                            <a [routerLink]="['/terms-Condition']">
                                    T&C    <span>/</span>    
                             </a>
                             <a href="#">
