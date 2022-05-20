@@ -29,9 +29,9 @@ export class BlogService {
     
   }
 
-  getBlogDetail(){
+  getBlogDetail(blog_id : string){
       let data : any = {
-        blog_id : "1"
+        blog_id : blog_id
       }
       for(let key in data){
         formdata.append(key,data[key]);

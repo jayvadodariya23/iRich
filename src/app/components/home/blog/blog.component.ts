@@ -3,6 +3,8 @@ import { Blog } from 'src/app/modals/blog';
 import { getBlogsResponse } from 'src/app/modals/blogs';
 import { BlogService } from 'src/app/services/blog.service';
 
+declare var $ : any;
+
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -13,7 +15,7 @@ export class BlogComponent implements OnInit {
   Blogs :Blog[] = new getBlogsResponse().data; 
 
   constructor(private blogService : BlogService) {
-
+  
   }
 
   ngOnInit(): void {

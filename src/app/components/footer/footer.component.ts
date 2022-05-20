@@ -43,4 +43,16 @@ export class FooterComponent implements OnInit {
     });
 
   }
+
+  aboutClick = () => {
+    document.getElementById("heritageDetails")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
+  }
+
+  contactClick = () => {
+    document.getElementById("contactus")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
+  }
+
+  blogClick = () => {
+    document.getElementById("blog")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
+  }
 }

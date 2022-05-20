@@ -1,7 +1,53 @@
 <div class="mapouter">
     <div class="gmap_canvas">
-        <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-        src="https://maps.google.com/maps?width=1247&amp;height=988&amp;hl=en&amp;q=Parihar Nagar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+        <!-- <iframe class="gmap_iframe" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
+        src="https://maps.google.com/maps?width=1247&amp;height=988&amp;hl=en&amp;q=Parihar Nagar&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> -->
+    
+    <agm-map 
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+        >
+
+        <agm-marker 
+            *ngFor="let m of markers; let i = index"
+            [latitude]="m.lat"
+            [longitude]="m.lng"
+            [markerDraggable]="m.draggable"
+            [iconUrl]="{
+                url: './assets/images/marker.png'
+            }">
+
+            <agm-info-window>
+                <div class="ir-gmap-popup">
+                    <div class="d-flex">
+                        <figure>
+                            <img src="{{m.icon}}" alt="Map Location">
+                        </figure>
+                        <div class="irch-map-title ml-3">
+                            <h4>{{m.label}}</h4>
+                            <h6>{{m.place_description}}</h6>
+                        </div>
+                        <a  [routerLink]="['/place-detail', m.place_id]">
+                            <div class="ml-auto p-2">
+                                <svg id="Forward_arrow" class="Forward_arrow" data-name="Forward arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
+                                    <path id="Path_10" data-name="Path 10" d="M9,0,7.364,1.636l6.195,6.195H-10v2.338H13.558L7.364,16.364,9,18l9-9Z" transform="translate(10)" fill="#202b5d"></path>
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue gravida quam. In id sem nec arcu convallis tincidunt</p>
+                    <div class="popup-link-list">
+                        <a href="#">23 Photos</a>
+                        <a href="#">12 Videos</a>
+                    </div>
+                </div>
+              </agm-info-window>
+
+        </agm-marker>
+
+    </agm-map>
     </div>
     <div class="irch-map-locations">
         <div class="irch-map-title d-flex justify-content-between">

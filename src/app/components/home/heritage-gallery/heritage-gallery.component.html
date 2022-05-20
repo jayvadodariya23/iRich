@@ -10,83 +10,14 @@
                     </div>
                     <div class="irch-gallery-carousel">
                         <div class="gallery-carousel owl-carousel owl-theme">
-                            <div class="item">
+                            <div class="item"  *ngFor="let place of places">
                                 <div class="gallery-bx">
                                     <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
+                                        <img src="{{place.icon}}" class="img-fluid" alt="">
                                     </div>
                                     <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p>
-                                            Lorem ipsum dolor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gallery-bx">
-                                    <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p>
-                                            Lorem ipsum dolor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gallery-bx">
-                                    <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p>
-                                            Lorem ipsum dolor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gallery-bx">
-                                    <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p>Lorem ipsum dolor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gallery-bx">
-                                    <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p> Lorem ipsum dolor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gallery-bx">
-                                    <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p> Lorem ipsum dolor</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="gallery-bx">
-                                    <div class="gallery-img">
-                                        <img src="assets/images/g-img.png" class="img-fluid" alt="">
-                                    </div>
-                                    <div class="gallery-details">
-                                        <h5>Lorem ipsum dolor</h5>
-                                        <p> Lorem ipsum dolor</p>
+                                        <h5>{{place.place_title}}</h5>
+                                        <p>{{place.place_description}}</p>
                                     </div>
                                 </div>
                             </div>

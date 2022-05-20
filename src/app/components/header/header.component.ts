@@ -13,7 +13,6 @@ export class HeaderComponent implements OnInit {
   }
 
   aboutClick = () => {
-    debugger;
     document.getElementById("heritageDetails")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
   }
 

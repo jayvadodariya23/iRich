@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { PlaceDetailComponent } from './components/place-detail/place-detail.component';
+import { AgmCoreModule } from '@agm/core';
+import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { PlaceDetailComponent } from './components/place-detail/place-detail.com
     PrivacyPolicyComponent,
     TermsAndConditionComponent,
     AboutUsComponent,
-    PlaceDetailComponent
+    PlaceDetailComponent,
+    BlogDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,8 +53,12 @@ import { PlaceDetailComponent } from './components/place-detail/place-detail.com
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    AgmCoreModule.forRoot({
+      apiKey : 'AIzaSyCBZ1E4AGu6xP_VV4GWr_qjnOte9sFmh0A'
+    })
   ],
+  schemas : [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [],
   bootstrap: [AppComponent]
 })

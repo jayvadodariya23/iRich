@@ -1,0 +1,25 @@
+            <!-- place start -->
+            <section class="irch-place">
+                <div class="container">
+                    <div class="row align-items-center text-center">
+                        <div class="col-md-12">
+                            <h1>{{blog.blog_title}}</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- place end -->
+            
+            <!-- place content -->
+            <section class="irch-place-content irch-blog-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 text-center">
+                            <div class="irch-place-details ">
+                                <div [innerHTML] = "blog.blog_description"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- place content end-->

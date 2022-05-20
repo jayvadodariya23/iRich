@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Cabin';
-    src : url('/assets/fonts/fa-brands-400.woff2') format('woff2'), url('/assets/fonts/Cabin-BoldItalic.woff') format('woff');
+    src: url('/assets/fonts/fa-brands-400.woff2') format('woff2'), url('/assets/fonts/Cabin-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
@@ -11,7 +11,6 @@
 @font-face {
     font-family: 'Cabin';
     src: url('/assets/fonts/Cabin-Bold.woff2') format('woff2'), url('/assets/fonts/Cabin-Bold.woff') format('woff');
-    src: url();
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -607,7 +606,7 @@ section {
 }
 
 .irch-gallery {
-    background: url('assets/images/gallery-bg.png');
+    background: url('/assets/images/gallery-bg.png');
     background-position: center;
     background-size: cover;
     margin-top: 100px;
@@ -985,7 +984,7 @@ section {
 }
 
 .irch-contact-us {
-    background: #f3f3f3 url('assets/images/Asset 1.png');
+    background: #f3f3f3 url('/assets/images/Asset 1.png');
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
@@ -1091,7 +1090,8 @@ footer {
 
 .foot-links li a {
     display: block;
-    color: rgba(255, 255, 255, 0.80);
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.80) !important;
     font-size: 16px;
     font-weight: 500;
     margin: 12px 0px;
@@ -1335,6 +1335,7 @@ li.social-title,
     background: none!important;
     width: 100%;
     height: 988px;
+    position: relative;
 }
 
 .gmap_iframe {
@@ -1407,895 +1408,117 @@ li.social-title,
 /* =========================== Map  end ============================== */
 
 
-@media screen and (min-width:1201px) and (max-width:1600px) {
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 12px;
-    }
+/****************************** Style By Harshad  Start ******************************/
+
+
+/* **********  Blog Page Start   ************ */
+
+.irch-blog-content {
+    padding-bottom: 100px;
 }
 
-@media screen and (min-width:1025px) and (max-width:1200px) {
-    /* home page */
-    .inquiry {
-        display: none !important;
-    }
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 12px 15px;
-    }
-    .irch-ban-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-45%, -50%);
-        z-index: 1;
-        width: 100%;
-    }
-    .irch-ban-content h1 {
-        font-size: 45px;
-    }
-    .irch-ban-content p {
-        max-width: 780px;
-        margin-bottom: 20px;
-    }
-    .irch-heritage-details {
-        padding-top: 30px;
-    }
-    .irch-heritage {
-        padding-bottom: 50px;
-    }
-    .irch-gallery {
-        margin-top: 0px;
-        padding-bottom: 50px;
-    }
-    .irch-blog,
-    footer {
-        padding-top: 40px;
-    }
-    .foot-privacy a {
-        margin: 0px 5px;
-    }
-    .foot-privacy a span {
-        padding: 0px 10px;
-    }
-    /* home page end */
+
+/* **********  Blog Page End   ************ */
+
+
+/* **********   Map Page Start   ************ */
+
+.irch-map-location li figure {
+    width: 80px;
+    height: 80px;
 }
 
-@media screen and (min-width:992px) and (max-width:1024px) {
-    /* home page */
-    .inquiry {
-        display: none !important;
-    }
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 12px 15px;
-    }
-    .irch-ban-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-45%, -50%);
-        z-index: 1;
-        width: 100%;
-    }
-    .irch-ban-content h1 {
-        font-size: 45px;
-    }
-    .irch-ban-content p {
-        max-width: 780px;
-        margin-bottom: 20px;
-    }
-    .irch-heritage-details {
-        padding-top: 30px;
-    }
-    .irch-heritage {
-        padding-bottom: 50px;
-    }
-    .irch-gallery {
-        margin-top: 0px;
-        padding-bottom: 50px;
-    }
-    .irch-blog,
-    footer {
-        padding-top: 40px;
-    }
-    .foot-privacy a {
-        margin: 0px 5px;
-    }
-    .foot-privacy a span {
-        padding: 0px 10px;
-    }
-    /* home page end */
+.irch-map-location li img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
-@media screen and (min-width:768px) and (max-width:991px) {
-    /* map */
-    .irch-map-locations {
-        width: 42%;
-    }
-    /* map end*/
-    /* place page start  */
-    .irch-place-content,
-    .irch-place-video {
-        padding-top: 50px;
-    }
-    #irch-v-carousel .owl-nav {
-        margin: 50px 0px;
-    }
-    /* place page end  */
-    /* home page start */
-    figure.gallery__item {
-        margin-bottom: 2rem;
-    }
-    .irch-nav.navbar-nav .nav-item {
-        display: block;
-        text-align: left;
-    }
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 10px 20px;
-    }
-    .irch-nav.navbar-nav .nav-item::before {
-        left: 20px;
-        right: auto;
-        bottom: 0px;
-    }
-    .navbar-nav.social-links {
-        display: block;
-    }
-    .social-links .nav-item {
-        display: inline-block;
-        margin: 20px 5px 30px;
-    }
-    .inquiry {
-        margin-bottom: 1rem;
-    }
-    .irch-ban-content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-46%, -50%);
-        z-index: 1;
-        width: 100%;
-    }
-    .irch-ban-content h1 {
-        font-size: 30px;
-        margin-bottom: 15px;
-    }
-    .irch-ban-content p {
-        margin-bottom: 20px;
-    }
-    .irch-heri-bx.active {
-        margin-top: -70px;
-    }
-    .irch-heritage {
-        padding-bottom: 50px;
-    }
-    .irch-heritage-details,
-    .irch-blog {
-        padding-top: 30px;
-    }
-    .irch-heritage-detail-content {
-        padding: 40px;
-    }
-    .irch-gallery {
-        margin-top: 0px;
-        padding: 50px 0px;
-    }
-    .irch-video {
-        margin-top: 0px;
-    }
-    .footer-top p,
-    .footer-socials {
-        margin-bottom: 2rem;
-    }
-    /* home page end */
+.irch-map-location li .irch-map-title {
+    width: calc(100% - 150px);
 }
 
-@media screen and (min-width:601px) and (max-width:767px) {
-    /* map start */
-    .irch-map-locations {
-        width: 100%;
-        height: auto;
-    }
-    /* map end */
-    /* place page start */
-    .irch-place h1 {
-        font-size: 50px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    .irch-place p {
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .irch-place-content,
-    .irch-place-video {
-        padding-top: 30px;
-    }
-    #irch-v-carousel .video-details {
-        height: auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #irch-v-carousel .owl-nav {
-        margin: 30px 0px;
-    }
-    /* place page end */
-    /* home page */
-    figure.gallery__item {
-        margin-bottom: 2rem;
-    }
-    .navbar {
-        padding: 0px;
-    }
-    .irch-nav.navbar-nav .nav-item {
-        display: block;
-        text-align: left;
-    }
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 10px 20px;
-    }
-    .irch-nav.navbar-nav .nav-item::before {
-        left: 20px;
-        right: auto;
-        bottom: 0px;
-    }
-    .navbar-nav.social-links {
-        display: block;
-    }
-    .social-links .nav-item {
-        display: inline-block;
-        margin: 20px 5px 30px;
-    }
-    .inquiry {
-        margin-bottom: 1rem;
-    }
-    .irch-ban-content h1 {
-        margin-bottom: 20px;
-        font-size: 30px;
-        padding: 0rem 1rem;
-    }
-    .irch-ban-content {
-        position: static;
-        top: 0;
-        left: 0;
-        transform: translate(0%, 0%);
-        z-index: 1;
-        background: #62718D;
-    }
-    .irch-ban-content h6 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        text-align: left;
-        padding: 1rem;
-    }
-    .irch-ban-content p {
-        color: #Fff;
-        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        font-style: italic;
-        margin-bottom: 30px;
-        padding: 0rem 1rem;
-    }
-    .btn.irch-ban-btn {
-        background: #F4530E;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 18px 50px;
-        border: 1px solid #F4530E;
-        letter-spacing: 0.10px;
-        color: #fff;
-        font-style: italic;
-        border-radius: 0px;
-    }
-    .irch-heri-bx.active {
-        margin-top: -70px;
-    }
-    .irch-heri-bx {
-        box-shadow: none;
-        padding: 20px 15px;
-    }
-    .irch-heri-img {
-        margin-bottom: 20px;
-    }
-    .irch-heri-content .irch-heri-title,
-    .irch-heri-content p {
-        margin-bottom: 10px;
-    }
-    .video-title p {
-        max-width: 100%;
-    }
-    .btn.irch-heri-btn {
-        padding: 8px 40px;
-    }
-    .irch-heritage {
-        padding-bottom: 30px;
-    }
-    .irch-heritage-details {
-        padding-top: 30px !important;
-    }
-    .irch-heritage-detail-content {
-        padding: 30px 20px;
-    }
-    .irch-gallery {
-        margin-top: 0px;
-        padding: 30px 0px;
-    }
-    .irch-video {
-        margin-top: 30px;
-    }
-    #irch_video {
-        height: 350px;
-    }
-    .video-details {
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        display: block;
-        justify-content: space-around;
-        height: 100%;
-        align-items: center;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -10%);
-        text-align: center;
-        padding: 15px;
-    }
-    .video-icon .btn-play {
-        display: inline-block;
-        margin-top: 1rem;
-        text-align: center;
-    }
-    .video-title h3 {
-        font-size: 30px;
-        max-width: 100%;
-        line-height: 30px;
-    }
-    .irch-contact-bx {
-        position: relative;
-        z-index: 1;
-        margin-top: 0;
-        padding: 40px 15px;
-    }
-    .irch-left {
-        padding: 15px;
-    }
-    .irch-frm-btn {
-        padding: 18px 40px;
-    }
-    .irch-frm-icon {
-        margin: 50px;
-    }
-    .irch-blog {
-        padding-top: 30px;
-    }
-    .irch-gallery h3,
-    .irch-contact-us h3 {
-        font-size: 18px;
-    }
-    .irch-gallery p,
-    .irch-contact-us p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    footer {
-        padding-top: 50px;
-    }
-    .footer-top {
-        padding: 30px 0px;
-    }
-    .footer-top p {
-        margin-bottom: 2rem;
-    }
-    .footer-top .foot-title {
-        margin-bottom: 10px;
-    }
-    .foot-links {
-        margin-bottom: 30px;
-    }
-    .foot-links li a {
-        margin: 10px 0px;
-    }
-    .news-btn {
-        position: absolute;
-        background: #f4530e;
-        border-radius: 0px;
-        top: 0;
-        right: 0;
-        top: 8px;
-        right: 10px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
-        padding: 10px 15px;
-    }
-    .news-frm .form-control {
-        border-radius: 0px;
-        padding: 30px 15px;
-    }
-    .footer-socials,
-    .foot-copyrights {
-        margin-bottom: 20px;
-    }
-    .foot-privacy {
-        text-align: left;
-    }
-    .foot-privacy a {
-        margin: 0px 5px;
-    }
-    .foot-privacy a span {
-        padding: 0px 10px;
-    }
-    /* home page end */
+.irch-map-location li a .d-flex>div:last-child {
+    width: 45px;
 }
 
-@media screen and (min-width:481px) and (max-width:600px) {
-    /* map start */
-    .irch-map-locations {
-        width: 100%;
-        height: auto;
-    }
-    /* map end */
-    /* place page start */
-    .irch-place h1 {
-        font-size: 50px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    .irch-place p {
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .irch-place-content,
-    .irch-place-video {
-        padding-top: 30px;
-    }
-    #irch-v-carousel .video-details {
-        height: auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #irch-v-carousel .owl-nav {
-        margin: 30px 0px;
-    }
-    /* place page end */
-    /* home page */
-    figure.gallery__item {
-        margin-bottom: 2rem;
-    }
-    .navbar {
-        padding: 0px;
-    }
-    .irch-nav.navbar-nav .nav-item {
-        display: block;
-        text-align: left;
-    }
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 10px 20px;
-    }
-    .irch-nav.navbar-nav .nav-item::before {
-        left: 20px;
-        right: auto;
-        bottom: 0px;
-    }
-    .navbar-nav.social-links {
-        display: block;
-    }
-    .social-links .nav-item {
-        display: inline-block;
-        margin: 20px 5px 30px;
-    }
-    .inquiry {
-        margin-bottom: 1rem;
-    }
-    .irch-ban-content h1 {
-        margin-bottom: 20px;
-        font-size: 30px;
-        padding: 0rem 1rem;
-    }
-    .irch-ban-content {
-        position: static;
-        top: 0;
-        left: 0;
-        transform: translate(0%, 0%);
-        z-index: 1;
-        background: #62718D;
-    }
-    .irch-ban-content h6 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        text-align: left;
-        padding: 1rem;
-    }
-    .irch-ban-content p {
-        color: #Fff;
-        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        font-style: italic;
-        margin-bottom: 30px;
-        padding: 0rem 1rem;
-    }
-    .btn.irch-ban-btn {
-        background: #F4530E;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 18px 50px;
-        border: 1px solid #F4530E;
-        letter-spacing: 0.10px;
-        color: #fff;
-        font-style: italic;
-        border-radius: 0px;
-    }
-    .irch-heri-bx.active {
-        margin-top: -70px;
-    }
-    .irch-heri-bx {
-        box-shadow: none;
-        padding: 20px 15px;
-    }
-    .irch-heri-img {
-        margin-bottom: 20px;
-    }
-    .irch-heri-content .irch-heri-title,
-    .irch-heri-content p {
-        margin-bottom: 10px;
-    }
-    .btn.irch-heri-btn {
-        padding: 8px 40px;
-    }
-    .irch-heritage {
-        padding-bottom: 30px;
-    }
-    .irch-heritage-details {
-        padding-top: 30px !important;
-    }
-    .irch-heritage-detail-content {
-        padding: 30px 20px;
-    }
-    .irch-gallery {
-        margin-top: 0px;
-        padding: 30px 0px;
-    }
-    .irch-video {
-        margin-top: 30px;
-    }
-    #irch_video {
-        height: 350px;
-    }
-    .video-details {
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        display: block;
-        justify-content: space-around;
-        height: 100%;
-        align-items: center;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -10%);
-        text-align: center;
-        padding: 15px;
-    }
-    .video-icon .btn-play {
-        display: inline-block;
-        margin-top: 1rem;
-        text-align: center;
-    }
-    .video-title h3 {
-        font-size: 30px;
-        max-width: 100%;
-        line-height: 30px;
-    }
-    .irch-contact-bx {
-        position: relative;
-        z-index: 1;
-        margin-top: 0;
-        padding: 40px 15px;
-    }
-    .irch-left {
-        padding: 15px;
-    }
-    .irch-frm-btn {
-        padding: 18px 40px;
-    }
-    .irch-frm-icon {
-        margin: 50px;
-    }
-    .irch-blog {
-        padding-top: 30px;
-    }
-    .irch-gallery h3,
-    .irch-contact-us h3 {
-        font-size: 18px;
-    }
-    .irch-gallery p,
-    .irch-contact-us p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    footer {
-        padding-top: 50px;
-    }
-    .footer-top {
-        padding: 30px 0px;
-    }
-    .footer-top p {
-        margin-bottom: 2rem;
-    }
-    .footer-top .foot-title {
-        margin-bottom: 10px;
-    }
-    .foot-links {
-        margin-bottom: 30px;
-    }
-    .foot-links li a {
-        margin: 10px 0px;
-    }
-    .news-btn {
-        position: absolute;
-        background: #f4530e;
-        border-radius: 0px;
-        top: 0;
-        right: 0;
-        top: 8px;
-        right: 10px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
-        padding: 10px 15px;
-    }
-    .news-frm .form-control {
-        border-radius: 0px;
-        padding: 30px 15px;
-    }
-    .footer-socials,
-    .foot-copyrights {
-        margin-bottom: 20px;
-    }
-    .foot-privacy {
-        text-align: left;
-    }
-    .foot-privacy a {
-        margin: 0px 5px;
-    }
-    .foot-privacy a span {
-        padding: 0px 10px;
-    }
-    /* home page end */
+.ir-gmap-popup {
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    padding: 15px;
+    border-radius: 20px;
+    width: 420px;
+    max-width: 100%;
 }
 
-@media screen and (max-width:480px) {
-    /* map start */
-    .irch-map-locations {
-        width: 100%;
-        height: auto;
-    }
-    /* map end */
-    /* place page start */
-    .irch-place h1 {
-        font-size: 50px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
-    .irch-place p {
-        font-size: 20px;
-        font-weight: 500;
-    }
-    .irch-place-content,
-    .irch-place-video {
-        padding-top: 30px;
-    }
-    #irch-v-carousel .video-details {
-        height: auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-    #irch-v-carousel .owl-nav {
-        margin: 30px 0px;
-    }
-    /* place page end */
-    /* home page */
-    .grid-gallery {
-        display: block;
-    }
-    .irch-grid {
-        padding-top: 30px;
-    }
-    figure.gallery__item {
-        margin-bottom: 2rem;
-    }
-    .navbar {
-        padding: 0px;
-    }
-    .irch-nav.navbar-nav .nav-item {
-        display: block;
-        text-align: left;
-    }
-    .irch-nav.navbar-nav .nav-item .nav-link {
-        padding: 10px 20px;
-    }
-    .irch-nav.navbar-nav .nav-item::before {
-        left: 20px;
-        right: auto;
-        bottom: 0px;
-    }
-    .navbar-nav.social-links {
-        display: block;
-    }
-    .social-links .nav-item {
-        display: inline-block;
-        margin: 20px 5px 30px;
-    }
-    .inquiry {
-        margin-bottom: 1rem;
-    }
-    .irch-ban-content h1 {
-        margin-bottom: 20px;
-        font-size: 30px;
-        padding: 0rem 1rem;
-    }
-    .irch-ban-content {
-        position: static;
-        top: 0;
-        left: 0;
-        transform: translate(0%, 0%);
-        z-index: 1;
-        background: #62718D;
-    }
-    .irch-ban-content h6 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        text-align: left;
-        padding: 0rem 1rem;
-    }
-    .irch-ban-content p {
-        color: #Fff;
-        text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 22px;
-        font-style: italic;
-        margin-bottom: 30px;
-        padding: 0rem 1rem;
-    }
-    .btn.irch-ban-btn {
-        background: #F4530E;
-        font-size: 16px;
-        font-weight: 500;
-        padding: 18px 50px;
-        border: 1px solid #F4530E;
-        letter-spacing: 0.10px;
-        color: #fff;
-        font-style: italic;
-        border-radius: 0px;
-    }
-    .irch-heri-bx.active {
-        margin-top: -70px;
-    }
-    .irch-heri-bx {
-        box-shadow: none;
-        padding: 20px 30px;
-    }
-    .irch-heritage {
-        padding-bottom: 30px;
-    }
-    .irch-heritage-details {
-        padding-top: 30px !important;
-    }
-    .irch-heritage-detail-content {
-        padding: 30px 20px;
-    }
-    .irch-gallery {
-        margin-top: 0px;
-        padding: 30px 0px;
-    }
-    .irch-video {
-        margin-top: 30px;
-    }
-    #irch_video {
-        height: 350px;
-    }
-    .video-details {
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-        display: block;
-        justify-content: space-around;
-        height: 100%;
-        align-items: center;
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -20%);
-        text-align: center;
-        padding: 15px;
-    }
-    .video-icon .btn-play {
-        display: inline-block;
-        margin-top: 1rem;
-        text-align: center;
-    }
-    .video-title h3 {
-        font-size: 30px;
-        line-height: 30px;
-    }
-    .irch-contact-bx {
-        position: relative;
-        z-index: 1;
-        margin-top: 0;
-        padding: 40px 15px;
-    }
-    .irch-left {
-        padding: 15px;
-    }
-    .irch-frm-btn {
-        padding: 18px 40px;
-    }
-    .irch-frm-icon {
-        margin: 50px;
-    }
-    .irch-blog {
-        padding-top: 30px;
-    }
-    .irch-gallery h3,
-    .irch-contact-us h3 {
-        font-size: 18px;
-    }
-    .irch-gallery p,
-    .irch-contact-us p {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    footer {
-        padding-top: 50px;
-    }
-    .footer-top {
-        padding: 30px 0px;
-    }
-    .footer-top p {
-        margin-bottom: 2rem;
-    }
-    .footer-top .foot-title {
-        margin-bottom: 10px;
-    }
-    .foot-links {
-        margin-bottom: 30px;
-    }
-    .foot-links li a {
-        margin: 10px 0px;
-    }
-    .news-btn {
-        position: absolute;
-        background: #f4530e;
-        border-radius: 0px;
-        top: 0;
-        right: 0;
-        top: 8px;
-        right: 10px;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
-        padding: 10px 15px;
-    }
-    .news-frm .form-control {
-        border-radius: 0px;
-        padding: 30px 15px;
-    }
-    .footer-socials,
-    .foot-copyrights {
-        margin-bottom: 20px;
-    }
-    .foot-privacy {
-        text-align: left;
-    }
-    .foot-privacy a {
-        margin: 0px 5px;
-    }
-    .foot-privacy a span {
-        padding: 0px 10px;
-    }
-    /* home page end */
+.ir-gmap-popup figure {
+    width: 80px;
+    height: 80px;
 }
+
+.ir-gmap-popup figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16);
+}
+
+.ir-gmap-popup .irch-map-title h4 {
+    font-style: normal;
+}
+
+.ir-gmap-popup .Forward_arrow {
+    width: 21px;
+}
+
+.ir-gmap-popup .irch-map-title {
+    width: calc(100% - 80px - 37px);
+}
+
+.ir-gmap-popup .irch-map-title h6 {
+    font-style: normal;
+}
+
+.ir-gmap-popup>p {
+    color: #62718D;
+    opacity: 0.6;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.popup-link-list a {
+    color: #F4530E;
+    font-style: normal;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #F4530E;
+    display: inline-block;
+    margin-right: 28px;
+}
+
+.popup-link-list a:hover {
+    color: #F4530E;
+    opacity: 0.8;
+}
+
+.ir-gmap-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #ffffff;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* **********   Map Page End   ************ */
+
+
+/****************************** Style By Harshad  End ******************************/

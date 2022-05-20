@@ -18,7 +18,7 @@
                         </div>
                         <div class="gallery-details">
                             <h5>{{blog.blog_title}}</h5>
-                            <p>{{blog.blog_description}}</p>
+                            <div [innerHTML] = "blog.blog_description"></div>
                             <div class="clearfix mt-3">
                                 <div class="float-left">
                                     <div class="date">
@@ -26,7 +26,7 @@
                                     </div>
                                 </div>
                                 <div class="float-right">
-                                    <a href="#"><span>Read More ID = {{blog.blog_id}}</span>
+                                    <a [routerLink]="['/blog-detail', blog.blog_id]"><span>Read More</span>
                                     <svg id="Forward_arrow" data-name="Forward arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
                                         <path id="Path_10" data-name="Path 10" d="M9,0,7.364,1.636l6.195,6.195H-10v2.338H13.558L7.364,16.364,9,18l9-9Z" transform="translate(10)" fill="#202b5d"/>
                                     </svg>
@@ -37,6 +37,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
         <div class="irch-gallery-btn text-center mt-5">
