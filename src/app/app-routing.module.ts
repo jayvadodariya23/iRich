@@ -11,7 +11,7 @@ import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-poli
 import { TermsAndConditionComponent } from './components/terms-and-condition/terms-and-condition.component';
 
 const routes: Routes = [
-  { path : '', component:HomeComponent },
+  { path : '', redirectTo : '/home' , pathMatch : 'full' },
   { path : 'home', component : HomeComponent },
   { path : 'map', component:MapComponent },
   { path : 'privacyPolicy', component : PrivacyPolicyComponent },
@@ -22,7 +22,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration : 'enabled',
+    anchorScrolling: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

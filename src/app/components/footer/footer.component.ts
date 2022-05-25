@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SiteSetting } from 'src/app/modals/siteSetting';
 import { FooterService } from 'src/app/services/footer.service';
 import { NotificationService } from 'src/app/services/notification.service';
 
@@ -12,7 +14,11 @@ formdata.append("token","123456789");
 })
 export class FooterComponent implements OnInit {
 
-  constructor(private footerService : FooterService, private notificationService : NotificationService) { }
+  @Input() siteSetting : SiteSetting;
+
+  constructor(private footerService : FooterService, private notificationService : NotificationService, private router : Router) {
+    this.siteSetting = new SiteSetting();
+  }
 
   email = "";
   emailRegex : RegExp = new RegExp(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi);
@@ -34,6 +40,7 @@ export class FooterComponent implements OnInit {
       if(res.status)
       {
         this.notificationService.showSuccess(res.message,"Sucssess");
+        this.clear();
       }
       else{
         this.notificationService.showError(res.message,"Fail");
@@ -54,5 +61,17 @@ export class FooterComponent implements OnInit {
 
   blogClick = () => {
     document.getElementById("blog")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
+  }
+
+  imageGalleryClick = () => {
+    document.getElementById("HeritageGallery")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
+  }
+
+  InteractiveMapClick = () => {
+    this.router.navigate(['map']);
+  }
+
+  clear = () => {
+    this.email = "";
   }
 }

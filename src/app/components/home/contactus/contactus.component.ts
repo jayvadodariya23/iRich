@@ -44,6 +44,7 @@ export class ContactusComponent implements OnInit {
       if(res.status)
       {
         this.notificationServices.showSuccess(res.message,"Success");
+        this.clear();
       }
       else
       {
@@ -65,6 +66,13 @@ export class ContactusComponent implements OnInit {
     if ((event.shiftKey || (keyCode < 48 || keyCode > 57))) {
         event.preventDefault();
     }
-}
+  }
+
+  clear = () => {
+    this.data.full_name = "";
+    this.data.message = "";
+    this.data.email = "";
+    this.data.number = "";
+  }
 
 }

@@ -18,4 +18,6 @@ export class HttpService {
   post<T>(url : string,data : any):Observable<T>{
     return this.httpClient.post<T>(BASE_URL+url,data);
   }
+
+  
 }

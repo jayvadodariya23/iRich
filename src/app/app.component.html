@@ -1,7 +1,7 @@
 <main>
     <!-- main page wrapper start -->
     <div class="page-wrap">
-        <app-header></app-header>
+        <app-header [siteSetting]="siteSetting"></app-header>
         <!-- <app-banner></app-banner>
         <app-heritage></app-heritage>
         <app-heritage-details id="heritageDetails"></app-heritage-details>
@@ -16,7 +16,7 @@
         <router-outlet></router-outlet>
         <!-- <app-home></app-home> -->
     </div>
-    <app-footer></app-footer>
+    <app-footer [siteSetting]="siteSetting"></app-footer>
     <!-- page wrapper end -->
 </main>
 

@@ -28,6 +28,8 @@ export class MapComponent implements OnInit {
 
   ngOnInit(): void {
 
+    document.getElementById("Map")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
+    
     this.placeServices.getPlaces().then(res => {
       this.places = res.data;
       let mkr : marker;

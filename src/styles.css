@@ -1517,6 +1517,13 @@ li.social-title,
     transform: translateX(-50%);
 }
 
+.stickyNav{
+    position: fixed !important;
+    width: 100% !important;
+    background-color: #fff !important;
+    z-index: 2;
+    padding-left: 0px !important;
+}
 
 /* **********   Map Page End   ************ */
 
