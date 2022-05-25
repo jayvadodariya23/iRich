@@ -19,9 +19,9 @@
                         <div class="col-md-12">
                             <div class="grid-gallery">
                                 <figure class="gallery__item gallery__item--1">
-                                    <img src="{{document[0].document_image}}"  target="_blank" class="gallery__img" alt="Image 2">
+                                    <img src="{{document[0].document_image}}" class="gallery__img" alt="Image 2">
                                     <div class="gallery-img-btn">
-                                        <a href="{{document[0].file}}" download="{{document[0].document_name}}"><span>{{document[0].document_name}}</span>
+                                        <a href="_blank" (click)="downloadMyFile(0)" ><span>{{document[0].document_name}}</span>
                                             <span class="irch-ficon">
                                                 <svg id="Forward_arrow" data-name="Forward arrow" xmlns="http://www.w3.org/2000/svg" width="28" height="18" viewBox="0 0 28 18">
                                                     <path id="Path_10" data-name="Path 10" d="M9,0,7.364,1.636l6.195,6.195H-10v2.338H13.558L7.364,16.364,9,18l9-9Z" transform="translate(10)" fill="#202b5d"></path>

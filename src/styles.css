@@ -973,14 +973,14 @@ section {
 }
 
 .irch-frm-btn {
-    display: block;
-    background: #202B5D;
-    font-size: 20px;
-    font-weight: 500;
-    padding: 18px 50px;
-    font-style: italic;
-    text-align: center;
-    color: #fff;
+    display: block !important;
+    background: #202B5D !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    padding: 18px 50px !important;
+    font-style: italic !important;
+    text-align: center !important;
+    color: #fff !important;
 }
 
 .irch-contact-us {
@@ -1114,17 +1114,17 @@ footer {
 }
 
 .news-btn {
-    position: absolute;
-    background: #f4530e;
-    border-radius: 0px;
-    top: 0;
-    right: 0;
-    top: 8px;
-    right: 10px;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    padding: 10px 30px;
+    position: absolute !important;
+    background: #f4530e !important;
+    border-radius: 0px !important;
+    top: 0 !important ;
+    right: 0 !important;
+    top: 8px !important;
+    right: 10px !important;
+    color: #fff !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    padding: 10px 30px !important;
 }
 
 .news-frm input::-webkit-input-placeholder {

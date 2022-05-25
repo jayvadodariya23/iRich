@@ -9,40 +9,35 @@ import { BlogService } from 'src/app/services/blog.service';
   styleUrls: ['./grid-gallery.component.css']
 })
 export class GridGalleryComponent implements OnInit {
-  document :DocumentHome[] = new getDocumentResponse().data; 
+  document: DocumentHome[] = new getDocumentResponse().data;
 
-  constructor(private blogService : BlogService) {
-  
+  constructor(private blogService: BlogService) {
+
   }
-//   downloadMyFile(index : number){
-//     const link = document.createElement('a');
-//     link.setAttribute('target', '_blank');
-//     link.setAttribute('href', this.document[index].file);
-//     link.setAttribute('download', this.document[index].document_name);
-//     document.body.appendChild(link);
-//     link.click();
-//     link.remove();
-// }
-downloadMyFile(index : number){
-              
-                //creating an invisible element
-                var element = document.createElement('a');
-                element.setAttribute('href', this.document[index].document_name);
-                element.setAttribute('download', this.document[index].file);
-              
-                // Above code is equivalent to
-                // <a href="path of file" download="file name">
-              
-                document.body.appendChild(element);
-              
-                //onClick property
-                element.click();
-              
-                document.body.removeChild(element);
-            }
-              
-            // Start file download.
-         
+  //   downloadMyFile(index : number){
+  //     const link = document.createElement('a');
+  //     link.setAttribute('target', '_blank');
+  //     link.setAttribute('href', this.document[index].file);
+  //     link.setAttribute('download', this.document[index].document_name);
+  //     document.body.appendChild(link);
+  //     link.click();
+  //     link.remove();
+  // }
+  downloadMyFile(index: number) {
+  
+    window.open(this.document[index].file); 
+    var a         = document.createElement('a');
+    a.href        = this.document[index].file; 
+    a.target      = '_blank';
+    a.download    = 'bill.pdf';
+    document.body.appendChild(a);
+    a.click();
+
+
+  }
+
+  // Start file download.
+
   ngOnInit(): void {
 
     this.blogService.getAllDocuments().then(res => {
