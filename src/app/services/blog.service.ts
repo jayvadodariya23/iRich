@@ -19,7 +19,7 @@ export class BlogService {
   getAllBlogs(){
 
    let res = new Promise<getBlogsResponse>( (resolve, reject)=> {
-      this.httpService.post<getBlogsResponse>("/get_blogs",formdata).subscribe((response)=>{
+      this.httpService.post<getBlogsResponse>("/get_blogs_for_home",formdata).subscribe((response)=>{
         resolve(response);
       },(error)=> {
         reject(error);
