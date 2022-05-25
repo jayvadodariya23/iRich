@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { HttpService } from './http.service';
 import { getBlogsResponse } from '../modals/blogs';
 import { getBlogDetail } from '../modals/resBlogDetail';
+import { getDocumentResponse } from '../modals/documents';
 
 
 let formdata : FormData = new FormData();
@@ -28,6 +29,19 @@ export class BlogService {
     return res;
     
   }
+  getAllDocuments(){
+
+    let res = new Promise<getDocumentResponse>( (resolve, reject)=> {
+       this.httpService.post<getDocumentResponse>("/get_documents",formdata).subscribe((response)=>{
+         resolve(response);
+       },(error)=> {
+         reject(error);
+       });
+ 
+     });
+     return res;
+     
+   }
 
   getBlogDetail(blog_id : string){
       let data : any = {

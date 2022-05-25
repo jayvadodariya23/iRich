@@ -1,41 +1,5 @@
 
-     $(document).ready(function() {
-         $('.irch-ban-carousel').owlCarousel({
-             loop: true,
-             margin: 10,
-             dots: true,
-             items: 1,
-             autoPlay: true
-         })
-     })
-     $(document).ready(function() {
-         $('.gallery-carousel').owlCarousel({
-             loop: false,
-             margin: 20,
-             dots: false,
-             nav: true,
-             navText: [
-                 '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                 '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-             ],
-             items: 5,
-             responsive: {
-                 0: {
-                     items: 1
-                 },
-                 600: {
-                     items: 3
-                 },
-                 1000: {
-                     items: 5
-                 }
-             }
-
-         });
-
-        
-     });
-
+   
 /**
  * Owl Carousel v2.3.4
  * Copyright 2013-2018 David Deutsch

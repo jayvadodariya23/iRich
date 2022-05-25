@@ -24,13 +24,7 @@
  <!-- irch-banner carousel  -->
  <script>
      $(document).ready(function() {
-         $('.irch-ban-carousel').owlCarousel({
-             loop: true,
-             margin: 10,
-             dots: true,
-             items: 1,
-             autoPlay: true
-         })
+        
      })
  </script>
  <!-- irch-banner carousel  end-->
@@ -38,50 +32,62 @@
  <!-- gallery carousel -->
  <script>
      $(document).ready(function() {
-         $('.gallery-carousel').owlCarousel({
-             loop: false,
-             margin: 20,
-             dots: false,
-             nav: true,
-             navText: [
-                 '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                 '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-             ],
-             items: 5,
-             responsive: {
-                 0: {
-                     items: 1
-                 },
-                 600: {
-                     items: 3
-                 },
-                 1000: {
-                     items: 5
-                 }
-             }
+        setTimeout(() => {
+            $('.irch-ban-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                dots: true,
+                items: 1,
+                autoPlay: true,
+                rewind : true
+            })
 
-         });
+            $('.irch-blog-carousel').owlCarousel({
+                    loop: false,
+                    margin: 20,
+                    dots: true,
+                    nav: false,
+                    items: 3,
+                    responsive: {
+                        0: {
+                            items: 1
+                        },
+                        600: {
+                            items: 3
+                        },
+                        1000: {
+                            items: 3
+                        }
+                    }
+            });
 
-         $('.irch-blog-carousel').owlCarousel({
-             loop: false,
-             margin: 20,
-             dots: true,
-             nav: false,
-             items: 3,
-             responsive: {
-                 0: {
-                     items: 1
-                 },
-                 600: {
-                     items: 3
-                 },
-                 1000: {
-                     items: 3
-                 }
-             }
+            $('.gallery-carousel').owlCarousel({
+                loop: false,
+                margin: 20,
+                dots: false,
+                nav: true,
+                navText: [
+                    '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                    '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+                ],
+                items: 5,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
 
-         });
-     });
+            });
+
+        }, 3000);
+           
+        });
  </script>
  <!-- gallery carousel end-->
 
@@ -105,83 +111,7 @@
      }
  </script>
  <!-- video tagg end-->
- 
- <!-- blog carousel -->
- <script>
 
-    $(document).ready(function() {
-        setTimeout(setcarousel, 2000);
-    });
-
-    function setcarousel()
-    {
-        $('.gallery-carousel').owlCarousel({
-            loop: false,
-            margin: 20,
-            dots: false,
-            nav: true,
-            navText: [
-                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
-                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
-            ],
-            items: 5,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 5
-                }
-            }
-
-        });
-
-        $('.irch-blog-carousel').owlCarousel({
-            loop: false,
-            margin: 20,
-            dots: true,
-            nav: false,
-            items: 3,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 3
-                }
-            }
-
-        });
-
-        $('.irch-blog-carousel').owlCarousel({
-            loop: false,
-            margin: 20,
-            dots: true,
-            nav: false,
-            items: 3,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                600: {
-                    items: 3
-                },
-                1000: {
-                    items: 3
-                }
-            }
-
-        });
-    }
-
- </script>
- <!-- blog carousel end-->
 
  <!-- toggler icon -->
  <script>
