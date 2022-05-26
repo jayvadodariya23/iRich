@@ -18,19 +18,19 @@
                 <h5 class="foot-title">Quick Links</h5>
                 <ul class="foot-links">
                     <li>
-                        <a (click)="aboutClick()">About iRich</a>
+                        <a [routerLink]="['./home']" fragment="heritageDetails" style="cursor: pointer;">About iRich</a>
                     </li>
                     <li>
-                        <a (click)="InteractiveMapClick()">Interactive Map</a>
+                        <a routerLink="/map">Interactive Map</a>
                     </li>
                     <li>
-                        <a (click)="blogClick()">Blogs</a>
+                        <a  [routerLink]="['./home']" fragment="blog" style="cursor: pointer;">Blogs</a>
                     </li>
                     <li>
-                        <a (click)="imageGalleryClick()">Image Gallery</a>
+                        <a  [routerLink]="['./home']" fragment="heritageGallery" style="cursor: pointer;">Image Gallery</a>
                     </li>
                     <li>
-                        <a (click)="contactClick()">Contact Us</a>
+                        <a routerLink="./home" fragment="contactus" style="cursor: pointer;">Contact Us</a>
                     </li>
 
                 </ul>
@@ -39,19 +39,19 @@
                 <h5 class="foot-title">Downloads</h5>
                 <ul class="foot-links">
                     <li>
-                        <a href="#">Booklet</a>
+                        <a (click)="downloadMyFile(0)">Booklet</a>
                     </li>
                     <li>
-                        <a href="#">Inforgraphics</a>
+                        <a (click)="downloadMyFile(1)">Inforgraphics</a>
                     </li>
                     <li>
-                        <a href="#">Print Friendly Booklet</a>
+                        <a (click)="downloadMyFile(2)">Print Friendly Booklet</a>
                     </li>
                     <li>
-                        <a href="#">Colouring Pages</a>
+                        <a (click)="downloadMyFile(3)">Colouring Pages</a>
                     </li>
                     <li>
-                        <a href="#">Print-friendly ICH Database</a>
+                        <a (click)="downloadMyFile(4)">Print-friendly ICH Database</a>
                     </li>
 
                 </ul>

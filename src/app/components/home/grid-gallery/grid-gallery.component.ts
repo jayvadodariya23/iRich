@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DocumentHome } from 'src/app/modals/document';
 import { getDocumentResponse } from 'src/app/modals/documents';
 import { BlogService } from 'src/app/services/blog.service';
+import { PDFService } from 'src/app/services/pdf.service';
+import { saveAs } from 'file-saver';
 
 @Component({
   selector: 'app-grid-gallery',
@@ -9,34 +11,14 @@ import { BlogService } from 'src/app/services/blog.service';
   styleUrls: ['./grid-gallery.component.css']
 })
 export class GridGalleryComponent implements OnInit {
-  document: DocumentHome[] = new getDocumentResponse().data;
-
-  constructor(private blogService: BlogService) {
-
-  }
-  //   downloadMyFile(index : number){
-  //     const link = document.createElement('a');
-  //     link.setAttribute('target', '_blank');
-  //     link.setAttribute('href', this.document[index].file);
-  //     link.setAttribute('download', this.document[index].document_name);
-  //     document.body.appendChild(link);
-  //     link.click();
-  //     link.remove();
-  // }
-  downloadMyFile(index: number) {
   
-    window.open(this.document[index].file); 
-    var a         = document.createElement('a');
-    a.href        = this.document[index].file; 
-    a.target      = '_blank';
-    a.download    = 'bill.pdf';
-    document.body.appendChild(a);
-    a.click();
+  @Input() document : DocumentHome[];
+  //document: DocumentHome[] = new getDocumentResponse().data;
 
-
+  constructor(private blogService: BlogService, private pdfServices : PDFService) {
+    //console.log(this.document);
+    this.document = new getDocumentResponse().data;
   }
-
-  // Start file download.
 
   ngOnInit(): void {
 
@@ -44,6 +26,21 @@ export class GridGalleryComponent implements OnInit {
       this.document = res.data;
     }).catch(err => {
       this.document = new getDocumentResponse().data;
+    });
+
+  }
+
+  downloadMyFile(index: number) {
+    // this.pdfServices.getPDF("https://cdn.filestackcontent.com/wcrjf9qPTCKXV3hMXDwK").subscribe((response) => {
+    //   let file = new Blob([response], { type : 'application/pdf' });
+    //   const fileName = this.document[0].document_name;
+    //   saveAs(file,fileName);
+    // });
+
+    this.pdfServices.getPDF(this.document[index].file).subscribe((response) => {
+      let file = new Blob([response], { type : 'application/pdf' });
+      const fileName = this.document[0].document_name;
+      saveAs(file,fileName);
     });
 
   }

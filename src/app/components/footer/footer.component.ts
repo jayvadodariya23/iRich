@@ -1,8 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { DocumentHome } from 'src/app/modals/document';
+import { getDocumentResponse } from 'src/app/modals/documents';
 import { SiteSetting } from 'src/app/modals/siteSetting';
 import { FooterService } from 'src/app/services/footer.service';
 import { NotificationService } from 'src/app/services/notification.service';
+import { PDFService } from 'src/app/services/pdf.service';
+import { saveAs } from 'file-saver';
 
 let formdata : FormData = new FormData();
 formdata.append("token","123456789");
@@ -15,9 +19,12 @@ formdata.append("token","123456789");
 export class FooterComponent implements OnInit {
 
   @Input() siteSetting : SiteSetting;
+  @Input() document : DocumentHome[];
 
-  constructor(private footerService : FooterService, private notificationService : NotificationService, private router : Router) {
+  constructor(private footerService : FooterService, private notificationService : NotificationService, 
+    private router : Router, private activatedRouter : ActivatedRoute, private pdfServices : PDFService) {
     this.siteSetting = new SiteSetting();
+    this.document = new getDocumentResponse().data;
   }
 
   email = "";
@@ -51,27 +58,23 @@ export class FooterComponent implements OnInit {
 
   }
 
-  aboutClick = () => {
-    document.getElementById("heritageDetails")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-  }
-
-  contactClick = () => {
-    document.getElementById("contactus")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-  }
-
-  blogClick = () => {
-    document.getElementById("blog")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-  }
-
-  imageGalleryClick = () => {
-    document.getElementById("HeritageGallery")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-  }
-
-  InteractiveMapClick = () => {
-    this.router.navigate(['map']);
-  }
-
   clear = () => {
     this.email = "";
   }
+
+  downloadMyFile(index: number) {
+    // this.pdfServices.getPDF("https://cdn.filestackcontent.com/wcrjf9qPTCKXV3hMXDwK").subscribe((response) => {
+    //   let file = new Blob([response], { type : 'application/pdf' });
+    //   const fileName = this.document[0].document_name;
+    //   saveAs(file,fileName);
+    // });
+    debugger;
+    this.pdfServices.getPDF(this.document[index].file).subscribe((response) => {
+      let file = new Blob([response], { type : 'application/pdf' });
+      const fileName = this.document[0].document_name;
+      saveAs(file,fileName);
+    });
+
+  }
+  
 }

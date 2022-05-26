@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { SiteSetting } from 'src/app/modals/siteSetting';
 import { ViewportScroller } from "@angular/common";
 import { ActivatedRoute } from '@angular/router';
+declare var $ : any;
 
 @Component({
   selector: 'app-header',
@@ -24,24 +25,5 @@ export class HeaderComponent implements OnInit {
     })
   }
 
-  
-
-  // aboutClick = () => {
-  //   document.getElementById("heritageDetails")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-
-  // }
-
-  // contactClick = () => {
-  //   document.getElementById("contactus")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-  // }
-
-  //dowloadClick = () => {
-    //document.getElementById("gridGallery")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-    //this.scroller.scrollToAnchor('gridGallery');
-  //}
-
-  // blogClick = () => {
-  //   document.getElementById("blog")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});
-  // }
-
 }
+
