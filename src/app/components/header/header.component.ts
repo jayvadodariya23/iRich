@@ -21,9 +21,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     this.router.fragment.subscribe((fragment) => {
       this.hash  = (fragment)? fragment: '';
-      console.log(fragment);
     })
   }
+
+  
 
   // aboutClick = () => {
   //   document.getElementById("heritageDetails")?.scrollIntoView({behavior:'smooth',block: 'start', inline: 'start'});

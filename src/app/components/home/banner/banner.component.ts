@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+declare var $ : any;
+
 
 @Component({
   selector: 'app-banner',
@@ -10,6 +12,20 @@ export class BannerComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    InitializeBanner();
   }
 
+}
+
+let InitializeBanner = () => {
+  setTimeout(() => {
+    $('.irch-ban-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      dots: true,
+      items: 1,
+      autoPlay: true,
+      rewind : true
+    })
+  }, 500);
 }

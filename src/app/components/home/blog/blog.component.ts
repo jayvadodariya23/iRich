@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Blog } from 'src/app/modals/blog';
 import { getBlogsResponse } from 'src/app/modals/blogs';
 import { BlogService } from 'src/app/services/blog.service';
-
 declare var $ : any;
 
 @Component({
@@ -19,12 +18,40 @@ export class BlogComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
+    debugger;
+    console.log("Blog Component");
     this.blogService.getAllBlogs().then(res => {
       this.Blogs = res.data;
+      this.InitializeBlog();
     }).catch(err => {
       this.Blogs = new getBlogsResponse().data;
     });
+
+  }
+
+
+  InitializeBlog = () => {
+    setTimeout(() => {
+      $('.irch-blog-carousel').owlCarousel({
+        loop: false,
+        margin: 20,
+        dots: true,
+        nav: false,
+        items: 3,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 3
+            }
+        }
+      }); 
+    }, 3000);
+     
 
   }
 
