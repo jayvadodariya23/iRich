@@ -6,5 +6,5 @@ export class PrivacyPolicy{
     }
    id : number;
    title : string;
-   description : string;
+   description : string; 
 }
