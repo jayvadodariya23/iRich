@@ -9,4 +9,4 @@ export class getAboutUsResponse{
     status : boolean;
     message : string;
     data : AboutUs[];
-}
+} 
