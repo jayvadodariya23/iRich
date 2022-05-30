@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 declare var $ : any;
 
 
@@ -9,23 +10,23 @@ declare var $ : any;
 })
 export class BannerComponent implements OnInit {
 
-  constructor() { }
+  constructor(public uiloader : NgxUiLoaderService) { }
 
   ngOnInit(): void {
-    InitializeBanner();
+    this.InitializeBanner();
   }
 
-}
+  InitializeBanner = () => {
+    setTimeout(() => {
+      $('.irch-ban-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        dots: true,
+        items: 1,
+        autoPlay: true,
+        rewind : true
+      });
+    }, 250);
+  }
 
-let InitializeBanner = () => {
-  setTimeout(() => {
-    $('.irch-ban-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      dots: true,
-      items: 1,
-      autoPlay: true,
-      rewind : true
-    })
-  }, 500);
 }

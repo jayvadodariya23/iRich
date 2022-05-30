@@ -31,11 +31,6 @@ export class GridGalleryComponent implements OnInit {
   }
 
   downloadMyFile(index: number) {
-    // this.pdfServices.getPDF("https://cdn.filestackcontent.com/wcrjf9qPTCKXV3hMXDwK").subscribe((response) => {
-    //   let file = new Blob([response], { type : 'application/pdf' });
-    //   const fileName = this.document[0].document_name;
-    //   saveAs(file,fileName);
-    // });
 
     this.pdfServices.getPDF(this.document[index].file).subscribe((response) => {
       let file = new Blob([response], { type : 'application/pdf' });

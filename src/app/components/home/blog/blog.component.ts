@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { Blog } from 'src/app/modals/blog';
 import { getBlogsResponse } from 'src/app/modals/blogs';
 import { BlogService } from 'src/app/services/blog.service';
@@ -13,16 +14,16 @@ export class BlogComponent implements OnInit {
 
   Blogs :Blog[] = new getBlogsResponse().data; 
 
-  constructor(private blogService : BlogService) {
+  constructor(private blogService : BlogService, private ngxUiService : NgxUiLoaderService) {
   
   }
 
   ngOnInit(): void {
-    debugger;
-    console.log("Blog Component");
+    this.ngxUiService.start();
     this.blogService.getAllBlogs().then(res => {
       this.Blogs = res.data;
       this.InitializeBlog();
+      
     }).catch(err => {
       this.Blogs = new getBlogsResponse().data;
     });
@@ -50,9 +51,8 @@ export class BlogComponent implements OnInit {
             }
         }
       }); 
+      this.ngxUiService.stop();
     }, 3000);
-     
-
   }
 
 

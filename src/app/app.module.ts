@@ -25,6 +25,19 @@ import { ToastrModule } from 'ngx-toastr';
 import { PlaceDetailComponent } from './components/place-detail/place-detail.component';
 import { AgmCoreModule } from '@agm/core';
 import { BlogDetailsComponent } from './components/blog-details/blog-details.component';
+import { NgxUiLoaderConfig, NgxUiLoaderHttpModule, NgxUiLoaderModule, NgxUiLoaderRouterModule, PB_DIRECTION, POSITION, SPINNER } from 'ngx-ui-loader';
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  fgsColor : "#fff",
+  fgsSize: 60,
+  fgsPosition: "center-center",
+  blur: 15,
+  fgsType: SPINNER.squareJellyBox, // foreground spinner type
+  pbDirection: PB_DIRECTION.leftToRight, // progress bar direction
+  pbThickness: 3, // progress bar thickness
+  overlayColor: "rgba(40, 40, 40, 0.92)",
+  pbColor: "#fff"
+};
 
 @NgModule({
   declarations: [
@@ -56,7 +69,10 @@ import { BlogDetailsComponent } from './components/blog-details/blog-details.com
     ToastrModule.forRoot(),
     AgmCoreModule.forRoot({
       apiKey : 'AIzaSyCBZ1E4AGu6xP_VV4GWr_qjnOte9sFmh0A'
-    })
+    }),
+    NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    NgxUiLoaderHttpModule.forRoot({ showForeground : true })
+    //NgxUiLoaderRouterModule.forRoot({ showForeground : true })
   ],
   schemas : [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],
   providers: [],

@@ -1,3 +1,7 @@
-<h1>{{privacyPolicy[0].title}}</h1>
-<br>
-<p>{{privacyPolicy[0].description}}</p>
+
+<div *ngFor="let policy of privacyPolicy">
+    <h1>{{policy.title}}</h1>
+    <br>
+    <p>{{policy.description}}</p>
+</div>
+

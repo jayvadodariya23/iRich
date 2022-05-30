@@ -1,4 +1,9 @@
 
-<h1>{{termsAndCondition[0].title}}</h1>
+<div *ngFor="let terms of termsAndCondition">
 
-<p>{{termsAndCondition[0].description}}</p>
+    <h1>{{terms.title}}</h1>
+
+    <p>{{terms.description}}</p>
+    
+</div>
+
