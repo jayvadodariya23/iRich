@@ -29,6 +29,7 @@ export class BlogService {
     return res;
     
   }
+  
   getAllDocuments(){
 
     let res = new Promise<getDocumentResponse>( (resolve, reject)=> {

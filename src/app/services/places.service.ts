@@ -29,6 +29,7 @@ export class PlacesService {
 
 
   getPlaceDetail = (place_id : string) => {
+    
     let data : any = {
       place_id : place_id
     }
