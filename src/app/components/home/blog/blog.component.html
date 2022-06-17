@@ -14,7 +14,10 @@
                 <div class="item" *ngFor="let blog of Blogs">
                     <div class="gallery-bx">
                         <div class="gallery-img">
-                            <img src="{{blog.image}}" class="img-fluid" alt="" >
+                            <a [routerLink]="['/blog-detail', blog.blog_id]">
+                                <img [src]="blog.image == '' ? noImagePlaceHolder :  blog.image "  class="img-fluid" alt="" >
+                            </a>
+                           
                         </div>
                         <div class="gallery-details">
                             <h5>{{blog.blog_title}}</h5>
@@ -43,4 +46,11 @@
             <a href="#" class="btn irch-ban-btn">Read All</a>
         </div>
 </div>
+
 </section>
+
+<!-- <h1>Fast Http Caching Demo</h1>
+<div *ngFor="let repo of data | async">
+    <h2>{{repo.email}}</h2>
+    <div>{{repo.first_name}}</div>
+</div> -->

@@ -17,13 +17,14 @@
             [markerDraggable]="m.draggable"
             [iconUrl]="{
                 url: './assets/images/marker.png'
-            }">
+            }"
+            >
 
             <agm-info-window>
                 <div class="ir-gmap-popup">
                     <div class="d-flex">
                         <figure>
-                            <img src="{{m.icon}}" alt="Map Location">
+                            <img [src]="m.icon == '' ? noImagePlaceHolder :  m.icon " alt="{{imageAlt}}">
                         </figure>
                         <div class="irch-map-title ml-3">
                             <h4>{{m.label}}</h4>
@@ -47,9 +48,12 @@
 
         </agm-marker>
 
+
+
     </agm-map>
     </div>
     <div class="irch-map-locations">
+
         <div class="irch-map-title d-flex justify-content-between">
             <h6 class="heri-sub-title">All Places</h6>
             <a class="btn btn-location d-lg-none d-md-none" data-toggle="collapse" href="#mapLocation" role="button" 
@@ -63,7 +67,7 @@
                 <a [routerLink]="['/place-detail', place.place_id]">
                     <div class="d-flex pt-4">
                         <figure>
-                            <img src="{{place.icon}}" alt="Map Location">
+                            <img [src]="place.icon == '' ? noImagePlaceHolder :  place.icon " alt="Map Location">
                         </figure>
                         <div class="irch-map-title ml-3">
                             <h4>{{place.place_title}}</h4>

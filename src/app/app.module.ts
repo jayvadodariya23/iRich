@@ -71,7 +71,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
       apiKey : 'AIzaSyCBZ1E4AGu6xP_VV4GWr_qjnOte9sFmh0A'
     }),
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
-    NgxUiLoaderHttpModule.forRoot({ showForeground : true })
+    // NgxUiLoaderHttpModule.forRoot({ showForeground : true })
     //NgxUiLoaderRouterModule.forRoot({ showForeground : true })
   ],
   schemas : [CUSTOM_ELEMENTS_SCHEMA, NO_ERRORS_SCHEMA],

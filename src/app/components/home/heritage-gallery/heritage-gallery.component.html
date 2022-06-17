@@ -11,9 +11,11 @@
                     <div class="irch-gallery-carousel">
                         <div class="gallery-carousel owl-carousel owl-theme">
                             <div class="item"  *ngFor="let place of places">
-                                <div class="gallery-bx">
+                                <div class="gallery-bx gallery-card">
                                     <div class="gallery-img">
-                                        <img src="{{place.icon}}" class="img-fluid" alt="">
+                                        <a  [routerLink]="['/place-detail', place.place_id]">
+                                            <img [src]="place.icon == '' ? noImagePlaceHolder :  place.icon "  class="img-fluid" alt="">
+                                        </a>
                                     </div>
                                     <div class="gallery-details">
                                         <h5>{{place.place_title}}</h5>
@@ -24,7 +26,9 @@
                         </div>
                     </div>
                     <div class="irch-gallery-btn text-center mt-5">
-                        <a href="#" class="btn irch-ban-btn">View All Images</a>
+                        <a routerLink="/map"  
+                        
+                        class="btn irch-ban-btn">View All Images</a>
                     </div>
                 </div>
             </section>

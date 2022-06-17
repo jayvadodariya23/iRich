@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 import { Place } from 'src/app/modals/place';
 import { getPlacesResponse } from 'src/app/modals/places';
 import { PlacesService } from 'src/app/services/places.service';
@@ -12,12 +13,13 @@ declare var $ : any;
 })
 export class HeritageGalleryComponent implements OnInit {
 
-  constructor(private placeServices : PlacesService) { }
+  constructor(private placeServices : PlacesService, private loader : NgxUiLoaderService) { }
 
   places :Place[] = new getPlacesResponse().data;
-
+  noImagePlaceHolder : string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkqvIEIUmRnqURQ__ruETeyRLsxpghoPQXg&usqp=CAU';
+  
   ngOnInit(): void {
-
+    this.loader.start();
     this.placeServices.getPlaces().then(res => {
       this.places = res.data;
       this.InitializeGallery();
@@ -52,6 +54,7 @@ export class HeritageGalleryComponent implements OnInit {
         }
   
       });
+      this.loader.stop(); 
     }, 3000);
 
     

@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() siteSetting : SiteSetting;
 
+  
   hash : string = "";
   
   constructor(private scroller : ViewportScroller, private router : ActivatedRoute) { 

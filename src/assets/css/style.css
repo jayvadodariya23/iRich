@@ -1,16 +1,17 @@
 /* =========================== Font Face ============================== */
 
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+/* @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/fa-brands-400.woff2') format('woff2'), url('/assets/fonts/Cabin-BoldItalic.woff') format('woff');
+    src: url('../fonts/fa-brands-400.woff2') format('woff2'), url('../fonts/Cabin-BoldItalic.woff') format('woff');
     font-weight: bold;
-    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-Bold.woff2') format('woff2'), url('/assets/fonts/Cabin-Bold.woff') format('woff');
+    src: url('../fonts/Cabin-Bold.woff2') format('woff2'), url('../fonts/Cabin-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -18,15 +19,14 @@
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-Italic.woff2') format('woff2'), url('/assets/fonts/Cabin-Italic.woff') format('woff');
+    src: url('../fonts/Cabin-Italic.woff2') format('woff2'), url('../fonts/Cabin-Italic.woff') format('woff');
     font-weight: normal;
-    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-Medium.woff2') format('woff2'), url('/assets/fonts/Cabin-Medium.woff') format('woff');
+    src: url('../fonts/Cabin-Medium.woff2') format('woff2'), url('../fonts/Cabin-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -34,7 +34,7 @@
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-SemiBold.woff2') format('woff2'), url('/assets/fonts/Cabin-SemiBold.woff') format('woff');
+    src: url('../fonts/Cabin-SemiBold.woff2') format('woff2'), url('../fonts/Cabin-SemiBold.woff') format('woff');
     font-weight: 600;
     font-style: normal;
     font-display: swap;
@@ -42,30 +42,32 @@
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-SemiBoldItalic.woff2') format('woff2'), url('/assets/fonts/Cabin-SemiBoldItalic.woff') format('woff');
+    src: url('../fonts/Cabin-SemiBoldItalic.woff2') format('woff2'), url('../fonts/Cabin-SemiBoldItalic.woff') format('woff');
     font-weight: 600;
-    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-MediumItalic.woff2') format('woff2'), url('/assets/fonts/Cabin-MediumItalic.woff') format('woff');
+    src: url('../fonts/Cabin-MediumItalic.woff2') format('woff2'), url('../fonts/Cabin-MediumItalic.woff') format('woff');
     font-weight: 500;
-    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Cabin';
-    src: url('/assets/fonts/Cabin-Regular.woff2') format('woff2'), url('/assets/fonts/Cabin-Regular.woff') format('woff');
+    src: url('../fonts/Cabin-Regular.woff2') format('woff2'), url('../fonts/Cabin-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 
 /* =========================== Base css ============================== */
+
+body {
+    position: relative;
+}
 
 * {
     margin: 0;
@@ -85,8 +87,8 @@ body {
     padding: 0;
     font-size: 15px;
     font-family: 'Cabin', sans-serif;
+    font-style: normal !important;
     color: #62718D;
-    font-style: italic;
     transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
@@ -177,28 +179,24 @@ textarea {
 ::-webkit-input-placeholder {
     color: #202B5D !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 18px;
 }
 
 ::-moz-placeholder {
     color: #202B5D !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 18px;
 }
 
 :-ms-input-placeholder {
     color: #202B5D !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 18px;
 }
 
 :-moz-placeholder {
     color: #202B5D !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 18px;
 }
 
@@ -215,18 +213,28 @@ textarea {
     display: block;
 }
 
-.ir-site {
+.ir-site-loder {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.ir-site-loder img {
+    width: 150px;
 }
 
 
 /* =========================== Home page start ============================== */
 
 section {
-    padding-top: 130px;
+    padding-top: 100px;
 }
 
 .menu {
@@ -284,7 +292,6 @@ section {
 .irch-nav.navbar-nav .nav-item .nav-link {
     font-size: 16px;
     font-weight: 500;
-    font-style: italic;
     color: #62718D;
     position: relative;
     padding: 12px 20px;
@@ -352,13 +359,11 @@ section {
 .iqnum h6 {
     font-size: 14px;
     font-weight: 500;
-    font-style: italic;
 }
 
 .iqnum h3 {
     color: #F4530E;
     font-weight: 600;
-    font-style: italic;
 }
 
 .social-links .nav-item {
@@ -412,12 +417,22 @@ section {
     position: relative;
 }
 
-.irch-ban-content {
+
+/* .irch-ban-content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-90%, -50%);
     z-index: 1;
+} */
+
+.irch-ban-content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 100%;
 }
 
 .irch-ban-content h6 {
@@ -425,7 +440,6 @@ section {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
     font-size: 24px;
     font-weight: 600;
-    font-style: italic;
     margin-bottom: 10px;
 }
 
@@ -434,7 +448,6 @@ section {
     text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
     font-size: 60px;
     font-weight: bold;
-    font-style: italic;
     margin-bottom: 30px;
 }
 
@@ -444,7 +457,6 @@ section {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
-    font-style: italic;
     margin-bottom: 60px;
 }
 
@@ -456,7 +468,6 @@ section {
     border: 1px solid #F4530E;
     letter-spacing: 0.10px;
     color: #fff;
-    font-style: italic;
     border-radius: 0px;
 }
 
@@ -472,7 +483,7 @@ section {
 
 .irch-heri-bx {
     background: #fff;
-    padding: 40px 30px;
+    padding: 60px 30px 80px;
     -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
     -o-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
@@ -507,7 +518,6 @@ section {
     letter-spacing: 0.10px;
     color: #F4530E;
     border: 1px solid #F4530E;
-    font-style: italic;
     border-radius: 0px;
 }
 
@@ -522,8 +532,7 @@ section {
     z-index: 1;
     background: #202B5D;
     color: #fff;
-    font-style: italic;
-    padding-bottom: 1px;
+    padding-bottom: 45px;
 }
 
 .irch-heri-bx.active .irch-heri-title {
@@ -549,13 +558,11 @@ section {
 .irch-heri-sub-title h6 {
     font-size: 16px;
     font-weight: 500;
-    font-style: italic;
     color: #F4530E;
 }
 
 .irch-heri-sub-title p {
     font-size: 14px;
-    font-style: italic;
     font-weight: 400;
     color: rgba(255, 255, 255, 0.50);
 }
@@ -613,7 +620,7 @@ section {
 }
 
 .irch-gallery {
-    background: url('/assets/images/gallery-bg.png');
+    background: url('../images/gallery-bg.png');
     background-position: center;
     background-size: cover;
     margin-top: 100px;
@@ -692,6 +699,11 @@ section {
     margin-bottom: 20px;
 }
 
+.irch-blog-carousel .gallery-img img {
+    height: 280px;
+    object-fit: cover;
+}
+
 .gallery-details h5 {
     font-size: 20px;
     font-weight: bold;
@@ -705,6 +717,11 @@ section {
     color: #62718D;
     margin-bottom: 10px;
     position: relative;
+    position: relative;
+}
+
+.gallery-card .gallery-details p {
+    padding-left: 20px;
 }
 
 .gallery-details p::before {
@@ -715,6 +732,9 @@ section {
     color: #202B5D;
     margin-right: 0.5rem;
     font-style: normal;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .gallery-carousel .item {
@@ -728,9 +748,10 @@ section {
 
 .gallery-carousel .owl-nav {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 0;
     right: 0;
+    transform: translateY(-50%);
 }
 
 .gallery-carousel.owl-carousel .owl-nav button.owl-next,
@@ -846,7 +867,7 @@ section {
 }
 
 .gallery-img-btn a {
-    color: #fff;
+    color: #fff !important;
     font-weight: 500;
     font-size: 16px;
 }
@@ -857,6 +878,12 @@ section {
 
 .gallery-img-btn a svg path {
     fill: #fff;
+}
+.irch-gallery .owl-stage .item {
+    height: 100%;
+}
+.irch-gallery .owl-stage {
+    display: flex;
 }
 
 .irch-video {
@@ -917,18 +944,22 @@ section {
 .video-icon .btn-play {
     display: block;
     color: #202B5D;
-    width: 60px;
-    height: 60px;
+    width: 120px;
+    height: 120px;
     border: 0px;
     background: #fff;
     text-align: center;
-    line-height: 60px;
+    line-height: 120px;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     -o-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     -ms-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-play i {
+    font-size: 20px;
 }
 
 .irch-left {
@@ -980,21 +1011,26 @@ section {
 }
 
 .irch-frm-btn {
-    display: block ;
-    background: #202B5D ;
-    font-size: 20px ;
-    font-weight: 500 ;
-    padding: 18px 50px ;
-    font-style: italic ;
-    text-align: center ;
-    color: #fff ;
+    display: block;
+    background: #202B5D;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 18px 50px;
+    text-align: center;
+    color: #fff;
 }
 
 .irch-contact-us {
-    background: #f3f3f3 url('/assets/images/Asset 1.png');
+    /* background: #f3f3f3 url('../images/Asset 1.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: contain; */    
+
+    background: #f3f3f3 url('../images/Asset 1.png');
     background-repeat: no-repeat;
     background-position: right;
     background-size: contain;
+    padding-bottom: 100px;
 }
 
 .irch-blog {
@@ -1047,12 +1083,14 @@ section {
     position: absolute;
     left: 40%;
     z-index: -1;
-    opacity: 0;
 }
 
-.float-right a:hover::before {
-    content: '';
-    opacity: 1;
+.float-right a svg {
+    transition: all ease-in-out 0.3s;
+}
+
+.float-right a:hover svg {
+    margin-left: 5px;
 }
 
 .irch-blog-carousel.owl-theme .owl-nav.disabled+.owl-dots {
@@ -1067,7 +1105,7 @@ section {
 
 footer {
     background: #f3f3f3;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 
 .footer-top {
@@ -1097,7 +1135,6 @@ footer {
 
 .foot-links li a {
     display: block;
-    cursor: pointer;
     color: rgba(255, 255, 255, 0.80) !important;
     font-size: 16px;
     font-weight: 500;
@@ -1121,12 +1158,12 @@ footer {
 }
 
 .news-btn {
-    position: absolute ;
+    position: absolute;
     background: #f4530e;
     border-radius: 0px;
-    top: 0 ;
+    top: 0;
     right: 0;
-    top: 8px ;
+    top: 8px;
     right: 10px;
     color: #fff;
     font-size: 16px;
@@ -1137,28 +1174,24 @@ footer {
 .news-frm input::-webkit-input-placeholder {
     color: rgba(0, 0, 0, 0.50) !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 16px;
 }
 
 .news-frm input::-moz-placeholder {
     color: rgba(0, 0, 0, 0.50) !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 16px;
 }
 
 .news-frm input:-ms-input-placeholder {
     color: rgba(0, 0, 0, 0.50) !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 16px;
 }
 
 .news-frm input:-moz-placeholder {
     color: rgba(0, 0, 0, 0.50) !important;
     font-weight: 600;
-    font-style: italic;
     font-size: 16px;
 }
 
@@ -1225,12 +1258,15 @@ li.social-title,
     position: absolute;
     left: -20%;
     z-index: -1;
-    opacity: 0;
+    opacity: 1;
 }
 
-.gallery-img-btn a:hover .irch-ficon::before {
-    content: '';
-    opacity: 1;
+.gallery-img-btn .irch-ficon {
+    transition: all ease-in-out 0.3s;
+}
+
+.gallery-img-btn a:hover .irch-ficon {
+    margin-left: -10px;
 }
 
 
@@ -1240,7 +1276,7 @@ li.social-title,
 /* =========================== Place page start ============================== */
 
 .irch-place {
-    background: url('assets/images/place.png');
+    background: url('../images/place.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -1351,13 +1387,14 @@ li.social-title,
 }
 
 .irch-map-locations {
-    width: 30%;
+    width: 420px;
     background: rgba(255, 255, 255, 0.90);
     padding: 20px;
     position: absolute;
     top: 0;
     height: 100%;
     text-align: left;
+    overflow-y: auto;
 }
 
 .irch-map-title h4 {
@@ -1416,6 +1453,27 @@ li.social-title,
 
 
 /****************************** Style By Harshad  Start ******************************/
+
+
+/* **********  Header Start   ************ */
+
+.navbar-brand {
+    margin-right: 80px;
+}
+
+.inquiry {
+    padding-left: 40px;
+    border-left: 1px solid rgb(98, 113, 141, 0.2);
+}
+
+.social-links {
+    padding: 0 40px;
+    margin-left: 40px;
+    border-left: 1px solid rgb(98, 113, 141, 0.2);
+}
+
+
+/* **********  Header Start   ************ */
 
 
 /* **********  Blog Page Start   ************ */
@@ -1524,15 +1582,23 @@ li.social-title,
     transform: translateX(-50%);
 }
 
-.ir-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    width: 100% ;
-    z-index: 10;
-    background-color: #fff;
-    padding-left: 0px ;
+.irch-map-locations .heri-sub-title {
+    color: #202B5D;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
+
+.irich-place-img-slider .item img {
+    height: 440px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.irich-place-img-slider .gallery-bx .gallery-img {
+    margin-bottom: 0;
+}
+
 
 /* **********   Map Page End   ************ */
 

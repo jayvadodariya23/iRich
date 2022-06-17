@@ -5,6 +5,8 @@ import { Place } from 'src/app/modals/place';
 import { getPlaceDetail } from 'src/app/modals/resPlaceDetail';
 import { NotificationService } from 'src/app/services/notification.service';
 
+declare var $ : any;
+
 @Component({
   selector: 'app-place-detail',
   templateUrl: './place-detail.component.html',
@@ -21,6 +23,7 @@ export class PlaceDetailComponent implements OnInit {
     }
 
   ngOnInit(): void {
+
     this.place_id = this.route.snapshot.paramMap.get('id') || "";
 
     if(this.place_id){
@@ -29,6 +32,7 @@ export class PlaceDetailComponent implements OnInit {
         if(res.status)
         {
           this.place  = res.data;
+          this.InitializeGallery();
         }
         else
         {
@@ -45,7 +49,61 @@ export class PlaceDetailComponent implements OnInit {
       this.notificationService.showError('Something Went Wrong','Failed');
     }
     
+  }
 
+  InitializeGallery = () => {
+
+    setTimeout(() => {
+      $('#placegallery').owlCarousel({
+        loop: false,
+        margin: 20,
+        dots: false,
+        nav: true,
+        navText: [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        items: 2,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 2
+            }
+        }
+
+      });
+
+      $('#irch-v-carousel').owlCarousel({
+        loop: false,
+        margin: 0,
+        dots: false,
+        nav: true,
+        navText: [
+            '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+            '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+        ],
+        items: 2,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 2
+            }
+        }
+
+      })
+    }, 3000);
+
+    
   }
 
 }

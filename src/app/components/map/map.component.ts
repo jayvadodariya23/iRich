@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Place } from 'src/app/modals/place';
 import { getPlacesResponse } from 'src/app/modals/places';
+import { GeneralUtilitiesService } from 'src/app/services/general-utilities.service';
 import { PlacesService } from 'src/app/services/places.service';
 
 @Component({
@@ -10,11 +11,20 @@ import { PlacesService } from 'src/app/services/places.service';
 })
 export class MapComponent implements OnInit {
 
-  constructor(private placeServices : PlacesService) { }
+  constructor(private placeServices : PlacesService, private generalUtilites : GeneralUtilitiesService) { }
 
   places :Place[] = new getPlacesResponse().data;
 
-  zoom : number = 14;
+  isNullOrEmpty(string : any){
+    debugger;
+    return this.generalUtilites.IsNullEmptyOrUndefined(string);
+  }
+
+  noImagePlaceHolder : string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkqvIEIUmRnqURQ__ruETeyRLsxpghoPQXg&usqp=CAU';
+
+  imageAlt: string = "Map Location";
+
+  zoom : number = 12;
 
   lat: number = 0;
   lng: number = 0;
@@ -42,8 +52,8 @@ export class MapComponent implements OnInit {
         mkr.icon = place.icon;
         this.markers.push(mkr);
       });
-      this.lat = this.markers[0].lat;
-      this.lng = this.markers[0].lng;
+      this.lat = this.markers[4].lat;
+      this.lng = this.markers[4].lng;
     }).catch(err => {
       this.places = new getPlacesResponse().data;
     });

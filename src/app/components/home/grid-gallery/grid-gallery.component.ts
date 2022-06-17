@@ -14,6 +14,7 @@ export class GridGalleryComponent implements OnInit {
   
   @Input() document : DocumentHome[];
   //document: DocumentHome[] = new getDocumentResponse().data;
+  noImagePlaceHolder : string = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtkqvIEIUmRnqURQ__ruETeyRLsxpghoPQXg&usqp=CAU';
 
   constructor(private blogService: BlogService, private pdfServices : PDFService) {
     //console.log(this.document);

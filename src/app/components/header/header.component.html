@@ -1,10 +1,13 @@
 <header>
     <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/images/logo.png" alt="Logo">
+        <nav class="navbar  navbar-expand-xl navbar-light">
+            <a class="navbar-brand" href="index.html">
+                <img src="assets/images/logo_1.png" alt="Logo">
             </a>
-            <button class="menu d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            <div class="bank-logo">
+                <img src="assets/images/logo.png" alt="Logo">
+            </div>
+           <!-- <button class="menu d-lg-none" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" 
             onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', true)"
             aria-label="Main Menu">
@@ -13,8 +16,11 @@
               <path class="line line2" d="M 20,50 H 80" />
               <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
             </svg>
-          </button>
+          </button> -->
 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="irch-nav navbar-nav ml-auto">
                     <li class="nav-item"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
@@ -36,7 +42,7 @@
                         <a class="nav-link"  routerLink="./home" fragment="contactus" style="cursor: pointer;">Contact Us</a>
                     </li>
                 </ul>
-                <ul class="navbar-nav ml-auto social-links">
+                <ul class="navbar-nav social-links">
                     <li class="nav-item">
                         <a href="{{siteSetting.facebook_link}}" class="nav-link">
                             <svg xmlns="http://www.w3.org/2000/svg" width="6.132" height="13.2" viewBox="0 0 6.132 13.2">
@@ -72,7 +78,7 @@
                         </a>
                     </li>
                 </ul>
-                <div class="inquiry ml-auto d-flex align-items-center">
+                <div class="inquiry d-flex align-items-center">
                     <div class="iqimg mr-3">
                         <svg xmlns="http://www.w3.org/2000/svg" width="36.639" height="36.083" viewBox="0 0 36.639 36.083">
                             <g id="phone" transform="translate(0.889 0.75)">

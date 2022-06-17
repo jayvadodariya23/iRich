@@ -1,25 +1,26 @@
             <!-- grid gallery -->
+                
             <section class="irch-grid">
                 <div class="container">
                     <div class="row mb-4">
-                        <div class="col-md-3">
+                        <div class="col col-12 col-md-6 col-lg-6 col-xl-3">
                             <div class="irch-grid-title">
                                 <h6>Downloads</h6>
                                 <h3>Important Resources</h3>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col col-12 col-md-6 col-lg-6 col-xl-6">
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla congue gravida quam. In id sem nec arcu convallis tincidunt</p>
                         </div>
-                        <div class="col-md-3 text-right irh-grid-btn">
+                        <div class="col col-12 col-md-12 col-lg-12 col-xl-3 text-right irh-grid-btn">
                             <a href="#" class="btn irch-ban-btn">View All Downloads</a>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="grid-gallery">
-                                    <figure class="gallery__item gallery__item--{{indexOfelement+1}}" *ngFor="let document of document;let indexOfelement=index">
-                                        <img src="{{document.document_image}}" class="gallery__img" alt="Image 2">
+                                <figure class="gallery__item gallery__item--{{indexOfelement+1}}" *ngFor="let document of document;let indexOfelement=index">
+                                        <img [src]="document.document_image == '' ? noImagePlaceHolder : document.document_image"  class="gallery__img" alt="Image 2">
                                         <div class="gallery-img-btn">
                                             <a (click)="downloadMyFile(indexOfelement)"><span>{{document.document_name}}</span>
                                                 <span class="irch-ficon">

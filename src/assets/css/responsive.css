@@ -1,6 +1,17 @@
 @media screen and (min-width:1201px) and (max-width:1600px) {
     .irch-nav.navbar-nav .nav-item .nav-link {
         padding: 12px;
+        font-size: 14px;
+    }
+    .navbar-brand {
+        margin-right: 30px;
+    }
+    .social-links {
+        padding: 0 10px;
+        margin-left: 10px;
+    }
+    .inquiry {
+        padding-left: 10px;
     }
 }
 
@@ -50,11 +61,83 @@
     /* home page end */
 }
 
+@media screen and (max-width:1600px) {
+    .navbar-brand {
+        margin-right: 30px;
+    }
+    .social-links {
+        padding: 0 10px;
+        margin-left: 10px;
+    }
+    .inquiry {
+        padding-left: 10px;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .navbar-light .navbar-toggler {
+        border-color: transparent;
+        position: relative;
+        z-index: 101;
+    }
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        height: 100vh;
+        background-color: #fff;
+    }
+    .inquiry {
+        padding-left: 0;
+        border: none;
+        margin-top: 20px;
+    }
+    .irch-nav.navbar-nav.ml-auto {
+        margin: unset !important;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar-collapse.show {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .social-links {
+        padding: 0;
+        margin-left: 0;
+        border: none;
+        display: flex;
+        flex-direction: row;
+    }
+    .bank-logo {
+        margin-right: auto;
+    }
+    .irch-banner .owl-carousel .owl-item img {
+        min-height: 600px;
+        object-fit: cover;
+    }
+    .irch-heri-bx {
+        padding: 40px 20px 60px;
+    }
+    .irch-heri-bx.active {
+        padding-bottom: 5px;
+    }
+    .irch-heri-bx.active .irch-heri-img img {
+        width: 150px;
+    }
+    .btn.irch-heri-btn {
+        padding: 10px 40px;
+    }
+}
+
 @media screen and (min-width:992px) and (max-width:1024px) {
     /* home page */
-    .inquiry {
+    /* .inquiry {
         display: none !important;
-    }
+    } */
     .irch-nav.navbar-nav .nav-item .nav-link {
         padding: 12px 15px;
     }
@@ -94,6 +177,47 @@
         padding: 0px 10px;
     }
     /* home page end */
+}
+
+@media screen and (max-width:991px) {
+    .video-icon .btn-play {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+    }
+    .irch-left {
+        padding: 20px;
+    }
+    .irch-contact-frm .form-control {
+        padding: 10px 10px;
+        height: auto;
+        font-size: 14px;
+    }
+    .irch-map-location li figure {
+        width: 60px;
+        height: 60px;
+    }
+    .irch-map-location li .ml-auto.p-2 {
+        margin-left: 15px !important;
+    }
+    .mapouter .irch-map-locations {
+        width: 310px;
+    }
+    .irich-place-img-slider .item img {
+        height: 200px;
+    }
+    .irich-place-img-slider .gallery-bx {
+        padding: 10px;
+    }
+    .irch-place {
+        min-height: 450px;
+    }
+    .irch-place h1 {
+        font-size: 50px;
+    }
+    .irch-place p {
+        font-size: 20px;
+    }
 }
 
 @media screen and (min-width:768px) and (max-width:991px) {
@@ -153,7 +277,8 @@
         margin-bottom: 20px;
     }
     .irch-heri-bx.active {
-        margin-top: -70px;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
     .irch-heritage {
         padding-bottom: 50px;
@@ -177,6 +302,35 @@
         margin-bottom: 2rem;
     }
     /* home page end */
+}
+
+@media screen and (max-width:767px) {
+    .irch-banner .owl-carousel .owl-item img {
+        min-height: auto;
+    }
+    .irch-ban-content {
+        position: static;
+        padding: 20px 0;
+    }
+    .irch-heri-bx {
+        margin-bottom: 20px;
+    }
+    .navbar-brand img {
+        width: 70px;
+    }
+    .bank-logo img {
+        width: 70px;
+    }
+    header .navbar {
+        padding: 10px 0px;
+    }
+    .mapouter .irch-map-locations {
+        width: 100%;
+        height: auto;
+    }
+    .irch-map-location.show {
+        height: 400px;
+    }
 }
 
 @media screen and (min-width:601px) and (max-width:767px) {
